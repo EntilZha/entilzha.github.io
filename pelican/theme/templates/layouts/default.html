@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  {% include "partials/head.html" %}
+  <body>
+    <div class="row">
+        <div class="small-16 medium-16 large-4 columns right head-area bgimage" style="background-image: url(http://pedrorodriguez.io/content/images/2015/Mar/IMG_3250-1.JPG)">
+            {% include "partials/header.html" %}
+        </div>
+        <div class="small-16 medium-16 large-12 columns main-column left">
+            <main class="content" role="main">
+                {% block content %}
+                {% endblock %}
+                {% include "partials/pagination.html" %}
+                {% include "partials/footer.html" %}
+            </main>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </body>
+</html>

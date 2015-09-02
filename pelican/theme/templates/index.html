@@ -1,0 +1,24 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+{% for article in articles_page.object_list %}
+<article class="post">
+    <div>
+        <header class="post-header">
+            <span class="post-meta">
+                <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+            </span>
+            <h2 class="post-title">
+                <a href="{{ SITEURL + "/" + article.url }}">{{ article.title }}</a>
+            </span>
+        </header>
+        <section class="post-excerpt"><p>{{ article.summary }}</p></section>
+        <a class="button read-more right small" href="{{ article.url }}">Read More</a>
+        <aside class="tags fi-pricetag-multiple">
+            {{ article.tags|join(", ") }}
+        </aside>
+        <div class="clearfix"></div>
+    </div>
+</article>
+{% endfor %}
+{% endblock content %}
