@@ -28,8 +28,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS ='posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
-PAGE_URL = '/{slug}'
-PAGE_SAVE_AS = 'pages/{slug}/index.html'
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '{slug}/index.html'
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),

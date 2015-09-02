@@ -1,0 +1,26 @@
+{% extends "layouts/default.html" %}
+
+{% block bodyclass %} class="post-template" {% endblock bodyclass %}
+
+{% block content %}
+<article class="post tag-bonnes-pratiques tag-tah">
+    <h1 class="post-title">{{ article.title }}</h1>
+    <span class="post-meta label"><time datetime="{{ article.date.strftime('%Y-%m-%d')}}"></time></span>
+    <section class="post-content">{{ article.content }}</content>
+    <hr>
+    <footer class="post-footer">
+        <section class="share">
+        </section>
+        <section class="author">
+            <header><span>About the Author</span></header>
+            <section>
+                <h4>{{ article.author }}</h4>
+                <img src="http://pedrorodriguez.io/content/images/2015/Mar/IMG_0611.JPG">
+                <a href="{{ article.author.url }}">Author Page</a>
+            </section>
+            <footer><p><font></font></p></footer>
+        </section>
+        <div class="clearfix"></div>
+    </footer>
+</article>
+{% endblock content %}

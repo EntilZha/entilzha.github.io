@@ -1,0 +1,11 @@
+{% extends "layouts/default.html" %}
+
+{% block bodyclass %} class="post-template" {% endblock bodyclass %}
+
+{% block content %}
+<article class="post tag-bonnes-pratiques tag-tah">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <section class="post-content">{{ page.content }}</content>
+    <hr>
+</article>
+{% endblock content %}
