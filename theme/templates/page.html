@@ -1,6 +1,8 @@
 {% extends "layouts/default.html" %}
 
-{% block bodyclass %} class="post-template" {% endblock bodyclass %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block metadescription %}{{ page.description }}{% endblock %}
+{% block bodyclass %} class="post-template" {% endblock %}
 
 {% block content %}
 <article class="post tag-bonnes-pratiques tag-tah">
@@ -8,4 +10,4 @@
     <section class="post-content">{{ page.content }}</content>
     <hr>
 </article>
-{% endblock content %}
+{% endblock %}

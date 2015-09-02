@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
-  {% include "partials/head.html" %}
-  <body {% block bodyclass %}{% endblock bodyclass %}>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="HandheldFriendly" content="True" />
+
+        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+        <meta name="description" content="{% block metadescription %}Pedro Rodriguez: read my blog or see my resume/cv{% endblock %}">
+
+        <link rel="stylesheet" type="text/css" href="/theme/css/ichi.css" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css" />
+    </head>
+  <body {% block bodyclass %}{% endblock %}>
     <div class="row">
         <div class="small-16 medium-16 large-4 columns right head-area bgimage" style="background-image: url(http://pedrorodriguez.io/content/images/2015/Mar/IMG_3250-1.JPG)">
             {% include "partials/header.html" %}

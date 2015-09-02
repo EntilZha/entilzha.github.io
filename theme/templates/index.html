@@ -1,6 +1,6 @@
 {% extends "layouts/default.html" %}
 
-{% block bodyclass %} class="home-template" {% endblock bodyclass %}
+{% block bodyclass %} class="home-template" {% endblock %}
 
 {% block content %}
 {% for article in articles_page.object_list %}
@@ -24,4 +24,4 @@
 </article>
 {% include "partials/pagination.html" %}
 {% endfor %}
-{% endblock content %}
+{% endblock %}
