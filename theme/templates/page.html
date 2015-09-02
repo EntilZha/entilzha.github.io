@@ -1,7 +1,7 @@
 {% extends "layouts/default.html" %}
 
 {% block title %}{{ page.title }}{% endblock %}
-{% block metadescription %}{{ page.description }}{% endblock %}
+{% block metadescription %}{{ page.description|e }}{% endblock %}
 {% block bodyclass %} class="post-template" {% endblock %}
 
 {% block content %}
