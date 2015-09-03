@@ -1,3 +1,9 @@
 <nav class="pagination" role="pagination">
-    <span class="page-number">Page 1 of 1</span>
+    {% if articles_page.has_previous() %}
+        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="tiny secondary button fi-arrow-left"></a>
+    {% endif %}
+    <span class="page-number">Page {{ articles_page.number }} of {{ articles_paginator.num_pages }}</span>
+    {% if articles_page.has_next() %}
+        <a href="{{ SITEURL }}/{{ articles_next_page.url}}" class="tiny secondary button fi-arrow-right"></a>
+    {% endif %}
 </nav>
