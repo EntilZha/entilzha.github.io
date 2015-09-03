@@ -3,5 +3,29 @@ Slug: about
 Authors: Pedro Rodriguez
 Description: About Pedro Rodriguez
 
-This will be an awesome post.
-About Pedro Rodriguez
+## Summary
+Pedro Rodriguez is a PhD student in Computer Science at the [University of Colorado at Boulder](http://cs.colorado.edu/).
+His research interests include machine learning and distributed computing, or more broadly data science and big data.
+He is most interested in the challenges of large scale machine learning in natural language processing,
+astrophysics, and more generally the sciences.
+
+Before starting his PhD, he worked at [Trulia](http://www.trulia.com/) as a Data Scientist. His projects included
+crowdsourcing with [Amazon Mechanical Turk](https://www.mturk.com/), building production web api systems with
+[Docker](https://www.docker.com/)/[Swagger](http://swagger.io/)/[Jenkins](https://jenkins-ci.org/)/[Django](https://www.djangoproject.com/),
+and click through rate prediction at scale using [Apache Spark](http://spark.apache.org/). He completed his
+undergraduate degree in Computer Science at the [University of California at Berkeley](http://www.cs.berkeley.edu/) in
+December 2015.
+
+Outside of work, he loves to ski, rock climb, contribute to open source, and game.
+
+To contact Pedro or learn more about him, download his resume from the link below or visit one of his social media
+accounts. For contract or consulting work, use the contact tab or <a href="http://www.google.com/recaptcha/mailhide/d?k=01iYFIl6B3xzrbv6mhk01WIg==&amp;c=TFGKPerMUv6Dii-GSIiMH3X313P2NMr77LxRq75UYHc=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501iYFIl6B3xzrbv6mhk01WIg\75\75\46c\75TFGKPerMUv6Dii-GSIiMH3X313P2NMr77LxRq75UYHc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">send an email</a>
+
+<a class="button small common-button" style="width:200px;" href="{filename}/resume.pdf" target="_blank">Download Resume</a>
+<!-- __ -->
+
+## Social Media
+* **Github:** [github.com/EntilZha](https://github.com/EntilZha)
+* **Twitter:** [twitter.com/EntilZhaPR](https://twitter.com/EntilZhaPR)
+* **Google Scholar:** [scholar.google.com](https://scholar.google.com/citations?user=JjpA4qwAAAAJ&hl=en)
+* **LinkedIn** [linkedin.com](https://www.linkedin.com/in/pedrorodriguezscience)

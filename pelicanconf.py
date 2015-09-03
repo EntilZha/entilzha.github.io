@@ -25,11 +25,15 @@ ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}/index.html'
 
-STATIC_PATHS = ['robots.txt', 'favicon.ico']
+STATIC_PATHS = ['robots.txt', 'favicon.ico', 'resume.pdf']
 
 DEFAULT_PAGINATION = 10
 
 THEME = 'theme'
+
+DEFAULT_METADATA = {
+    'link_target': 'blank-target'
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

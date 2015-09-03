@@ -8,7 +8,7 @@
 <article class="post tag-bonnes-pratiques tag-tah">
     <h1 class="post-title">{{ article.title }}</h1>
     <span class="post-meta label"><time datetime="{{ article.date.strftime('%Y-%m-%d')}}"></time></span>
-    <section class="post-content">{{ article.content }}</content>
+    <section class="post-content {{ article.link_target }}">{{ article.content }}</content>
     <hr>
     <footer class="post-footer">
         <section class="share">

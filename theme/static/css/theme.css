@@ -9212,3 +9212,14 @@ a:hover {
 .site-head-content {
     padding-top: 25px;
 }
+
+.common-button {
+    margin-bottom: 0;
+    background: #4a89dc;
+    padding: 0.7rem 1.6rem;
+    border-radius: 3px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
