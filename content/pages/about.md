@@ -3,7 +3,6 @@ Slug: about
 Authors: Pedro Rodriguez
 Description: About Pedro Rodriguez
 
-## Summary
 Pedro Rodriguez is a PhD student in Computer Science at the [University of Colorado at Boulder](http://cs.colorado.edu/).
 His research interests include machine learning and distributed computing, or in buzz word terminology data science and big data.
 He is interested in the challenges of large scale machine learning in natural language processing,
@@ -24,8 +23,27 @@ accounts. For contract or consulting work, use the contact tab or <a href="http:
 <a class="button small common-button" style="width:200px;" href="{filename}/resume.pdf" target="_blank">Download Resume</a>
 <!-- __ -->
 
-## Social Media
+### Social Media
 * **Github:** [github.com/EntilZha](https://github.com/EntilZha)
 * **Twitter:** [twitter.com/EntilZhaPR](https://twitter.com/EntilZhaPR)
 * **Google Scholar:** [scholar.google.com](https://scholar.google.com/citations?user=JjpA4qwAAAAJ&hl=en)
 * **LinkedIn** [linkedin.com](https://www.linkedin.com/in/pedrorodriguezscience)
+
+### Languages, Tools, and Skills
+* Python, Scala, HTML/CSS/Javascript, C, SQL, Java, Ruby, LaTeX, Matlab, Go
+* Apache Spark, Hadoop, Django, Docker, Git, MPI, Ruby on Rails
+* Amazon Mechanical Turk, Amazon EC2, Swagger, Jenkins
+
+### Jobs
+* Phd Student and Research Assistant at University of Colorado at Boulder (current)
+* Data Scientist at Trulia
+* Undergraduate Research Assistant at UC Berkeley AMPLab
+* Researcher at Boise State University Cryosphere Science
+* Undergraduate Research Assistant at UC Berkeley Astronomy Department
+* Software Developer at Scentsy
+* Software Developer at Clearwater Analytics
+* Various web development contract work
+
+### Certifications
+* National Ski Patrol: Outdoor Emergency Care, Avalanche Level 2, Mountain Travel and Rescue Level 2
+* American Avalanche Association: Avalanche Level 3, Professional Member, Avalanche Level 1 Instructor
