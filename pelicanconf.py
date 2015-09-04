@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import assets
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
@@ -35,5 +36,6 @@ DEFAULT_METADATA = {
     'link_target': 'blank-target'
 }
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+PLUGINS = [assets]
+
+DEBUG_MODE = True
