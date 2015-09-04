@@ -5,9 +5,9 @@ Description: About Pedro Rodriguez
 
 ## Summary
 Pedro Rodriguez is a PhD student in Computer Science at the [University of Colorado at Boulder](http://cs.colorado.edu/).
-His research interests include machine learning and distributed computing, or more broadly data science and big data.
-He is most interested in the challenges of large scale machine learning in natural language processing,
-astrophysics, and more generally the sciences.
+His research interests include machine learning and distributed computing, or in buzz word terminology data science and big data.
+He is interested in the challenges of large scale machine learning in natural language processing,
+astrophysics, and the sciences.
 
 Before starting his PhD, he worked at [Trulia](http://www.trulia.com/) as a Data Scientist. His projects included
 crowdsourcing with [Amazon Mechanical Turk](https://www.mturk.com/), building production web api systems with
