@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from filters import  blog_date_format
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
@@ -42,3 +43,7 @@ SITEMAP = {
 }
 
 DEBUG_MODE = True
+
+JINJA_FILTERS = {
+    'blog_date_format': blog_date_format
+}
