@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import assets
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
@@ -36,6 +35,10 @@ DEFAULT_METADATA = {
     'link_target': 'blank-target'
 }
 
-PLUGINS = [assets]
+PLUGINS = ['assets', 'sitemap', 'gzip_cache']
+
+SITEMAP = {
+    'format': 'xml'
+}
 
 DEBUG_MODE = True
