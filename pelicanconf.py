@@ -27,7 +27,7 @@ PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}/index.html'
 
 # 2015 is here to serve as a redirect from old blog url
-STATIC_PATHS = ['robots.txt', 'favicon.ico', 'resume.pdf', '2015', 'CNAME']
+STATIC_PATHS = ['robots.txt', 'favicon.ico', 'resume.pdf', '2015', 'CNAME', 'static']
 ARTICLE_EXCLUDES = ['2015']
 
 DEFAULT_PAGINATION = 10
