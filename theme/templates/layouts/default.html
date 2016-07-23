@@ -6,6 +6,13 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta name="description" content="{% block metadescription %}Pedro Rodriguez: read my blog or see my resume/cv{% endblock %}">
+        <script type="text/javascript">
+            var host = "yoursite.com";
+            if ((host == window.location.host) && (window.location.protocol != "https:")) {
+                window.location.protocol = "https";
+            }
+        </script>
+        <link rel="canonical" href="{{ SITEURL }}" />
 
         {% if DEBUG_MODE %}
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/theme.css" />
