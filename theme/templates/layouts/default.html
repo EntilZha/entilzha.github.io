@@ -3,25 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta name="description" content="{% block metadescription %}Pedro Rodriguez: read my blog or see my resume/cv{% endblock %}">
         <script type="text/javascript">
-            var host = "yoursite.com";
+            var host = "{{ HOST }}";
             if ((host == window.location.host) && (window.location.protocol != "https:")) {
                 window.location.protocol = "https";
             }
         </script>
         <link rel="canonical" href="{{ SITEURL }}" />
 
-        {% if DEBUG_MODE %}
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/theme.css" />
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css" />
-        {% else %}
         {% assets filters="cssmin", output="css/style.min.css", "css/theme.css", "css/pygments.css" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
         {% endassets %}
-        {% endif %}
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
         {% if GOOGLE_ANALYTICS %}
         <script>

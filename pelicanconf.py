@@ -1,15 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from datetime import date
 from filters import  blog_date_format
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
 SITEURL = 'http://localhost:8000'
+HOST = 'pedrorordiguez.io'
 
 PATH = 'content'
 
 TIMEZONE = 'America/Denver'
+
+CURRENT_YEAR = date.today().year
 
 DEFAULT_LANG = u'en'
 
@@ -27,7 +31,7 @@ PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}/index.html'
 
 # 2015 is here to serve as a redirect from old blog url
-STATIC_PATHS = ['robots.txt', 'favicon.ico', 'resume.pdf', '2015', 'CNAME', 'static']
+STATIC_PATHS = ['robots.txt', 'favicon.ico', 'resume.pdf', '2015', 'CNAME', 'static', 'posts']
 ARTICLE_EXCLUDES = ['2015']
 
 DEFAULT_PAGINATION = 10
@@ -49,3 +53,4 @@ DEBUG_MODE = True
 JINJA_FILTERS = {
     'blog_date_format': blog_date_format
 }
+
