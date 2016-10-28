@@ -48,6 +48,7 @@ Below is some extended gameplay of the above example for illustration:
 * [M. Iyyer, V. Manjunatha, J. L. Boyd-graber, and H. Daumé III, "Deep Unordered Composition Rivals Syntactic Methods for Text Classification.," ACL, pp. 1681–1691, 2015.](https://cs.umd.edu/~miyyer/pubs/2015_acl_dan.pdf)
 * [A. Guha, M. Iyyer, D. Bouman, and J. L. Boyd-graber, "Removing the Training Wheels: A Coreference Dataset that Entertains Humans and Challenges Computers.," HLT-NAACL, pp. 1108–1118, 2015.](https://www.cs.umd.edu/~aguha/publications/2015_naacl_qb_coref.pdf)
 *	[M. Iyyer, J. Boyd-Graber, HD III, "Generating Sentences from Semantic Vector Space Representations," NIPS Workshop on Learning Semantics, 2014.](http://cs.umd.edu/~miyyer/pubs/2014_nips_generation.pdf)
+* [H. He and J. L. Boyd-graber, “Opponent Modeling in Deep Reinforcement Learning.,” ICML, 2016.](http://jmlr.org/proceedings/papers/v48/he16.pdf)
 
 ## External Research
 
