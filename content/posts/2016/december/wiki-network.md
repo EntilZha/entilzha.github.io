@@ -1,4 +1,4 @@
-Title: Video Lecture: Playing Trivia Games by Playing the Wikipedia Game
+Title: Video Talk: Playing Trivia Games by Playing the Wikipedia Game
 Date: 2016-11-28
 Tags: artificial intelligence, machine learning, qanta, quiz bowl, networks
 Slug: trivia-games-with-wikipedia-game
