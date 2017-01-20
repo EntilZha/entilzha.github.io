@@ -7,5 +7,5 @@ Description: In this snowpack lecture from an avalanche level 1 course I talk ab
 
 In this snowpack lecture from an avalanche level 1 course organized by the <a href="http://bmnsp.org">Bryan Mountain Nordic Ski Patrol</a> I talk about the ways that the snowpack changes over time, and how that impacts avalanche safety.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=3fYxUW3T6YE" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3fYxUW3T6YE" frameborder="0" allowfullscreen></iframe>
 
