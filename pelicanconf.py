@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 from datetime import date
-from filters import  blog_date_format
+from filters import blog_date_format
+import assets
+import sitemap
+import gzip_cache
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
@@ -30,9 +33,14 @@ ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}/index.html'
 
-# 2015 is here to serve as a redirect from old blog url
-STATIC_PATHS = ['robots.txt', 'favicon.ico', 'resume.pdf', '2015', 'CNAME', 'static', 'posts']
-ARTICLE_EXCLUDES = ['2015']
+STATIC_PATHS = [
+    'robots.txt',
+    'favicon.ico',
+    'resume.pdf',
+    'CNAME',
+    'static',
+    'posts'
+]
 
 DEFAULT_PAGINATION = 10
 
@@ -42,7 +50,7 @@ DEFAULT_METADATA = {
     'link_target': 'blank-target'
 }
 
-PLUGINS = ['assets', 'sitemap', 'gzip_cache']
+PLUGINS = [assets, sitemap, gzip_cache, 'ipynb.liquid']
 
 SITEMAP = {
     'format': 'xml'
@@ -54,3 +62,6 @@ JINJA_FILTERS = {
     'blog_date_format': blog_date_format
 }
 
+MARKUP = ('md', )
+
+PLUGIN_PATHS = ['./plugins']

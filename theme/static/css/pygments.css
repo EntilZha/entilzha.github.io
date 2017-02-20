@@ -1,4 +1,5 @@
 .highlight pre { background-color: #333 !important; color: #f8f8f2}
+.input_area .hl-ipython3 pre { background-color: inherit !important; color: inherit !important;}
 .post code {
     background-color: #EBEBEB;
     padding: 2px;
