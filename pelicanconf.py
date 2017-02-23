@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 from datetime import date
-from filters import blog_date_format
+from filters import blog_date_format, default_description
 import assets
 import sitemap
 import gzip_cache
@@ -59,7 +59,8 @@ SITEMAP = {
 DEBUG_MODE = True
 
 JINJA_FILTERS = {
-    'blog_date_format': blog_date_format
+    'blog_date_format': blog_date_format,
+    'default_description': default_description
 }
 
 MARKUP = ('md', )

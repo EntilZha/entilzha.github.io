@@ -9261,3 +9261,16 @@ a:hover {
 .fi-social-google-scholar:hover {
     background: #4a89dc url(/theme/images/google-scholar.png) center no-repeat !important;
 }
+
+.post-content .cell .prompt {
+    min-width: 0;
+    padding: 0;
+}
+
+.post-content .cell {
+    padding-left: 0;
+}
+
+.post-content .inner_cell div.text_cell_render {
+    padding-left: 0;
+}

@@ -3,7 +3,6 @@ Date: 2017-1-19
 Tags: snow science, avalanche, lecture, video
 Slug: snowpack-lecture-avalanche-level-1
 Author: Pedro Rodriguez
-Description: In this snowpack lecture from an avalanche level 1 course I talk about how the snowpack changes over time
 
 In this snowpack lecture from an avalanche level 1 course organized by the <a href="http://bmnsp.org">Bryan Mountain Nordic Ski Patrol</a> I talk about the ways that the snowpack changes over time, and how that impacts avalanche safety.
 

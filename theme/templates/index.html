@@ -14,7 +14,7 @@
                 <a href="{{ SITEURL + '/' + article.url }}">{{ article.title }}</a>
             </span>
         </header>
-        <section class="post-excerpt"><p>{{ article.summary }}</p></section>
+        <section class="post-excerpt"><p>{{ article.description | default_description + article.summary }}</p></section>
         <a class="button read-more right small" href="{{ SITEURL + '/' + article.url }}">Read More</a>
         <aside class="tags fi-pricetag-multiple">
             {{ article.tags|join(", ") }}
