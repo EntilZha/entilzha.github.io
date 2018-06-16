@@ -10,7 +10,7 @@ import gzip_cache
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
 SITEURL = 'http://localhost:8000'
-HOST = 'pedrorordiguez.io'
+HOST = 'www.entilzha.io'
 
 PATH = 'content'
 
