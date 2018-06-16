@@ -1,11 +1,15 @@
-#!/usr/bin/env python
+t #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 from datetime import date
 from filters import blog_date_format, default_description
-import assets
-import sitemap
-import gzip_cache
+#import assets
+#import sitemap
+#import gzip_cache
+
+MARKUP = ('md',)
+PLUGIN_PATHS = ['/home/entilzha/code/pelican-plugins', './plugins']
+PLUGINS = ['assets', 'sitemap', 'gzip_cache', 'ipynb.liquid']
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
@@ -50,7 +54,6 @@ DEFAULT_METADATA = {
     'link_target': 'blank-target'
 }
 
-PLUGINS = [assets, sitemap, gzip_cache, 'ipynb.liquid']
 
 SITEMAP = {
     'format': 'xml'
@@ -65,4 +68,3 @@ JINJA_FILTERS = {
 
 MARKUP = ('md', )
 
-PLUGIN_PATHS = ['./plugins']
