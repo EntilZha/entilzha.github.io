@@ -9,5 +9,5 @@ In this video talk I discuss recent work which uses a network science technique 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y8Hp01-R4Uk" frameborder="0" allowfullscreen></iframe>
 
-This research is supported by an [NSF Grant](http://www.umiacs.umd.edu/~jbg/projects/IIS-1320538.html), and more information about the project overall can be found in a [prior talk](https://pedrorodriguez.io/blog/2016/11/21/machine-learning-in-trivia-games/).
+This research is supported by an [NSF Grant](http://www.umiacs.umd.edu/~jbg/projects/IIS-1320538.html), and more information about the project overall can be found in a [prior talk](https://www.entilzha.io/blog/2016/11/21/machine-learning-in-trivia-games/).
 
