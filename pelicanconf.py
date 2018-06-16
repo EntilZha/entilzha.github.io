@@ -1,15 +1,13 @@
-t #!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+#!/usr/bin/env python
 from datetime import date
 from filters import blog_date_format, default_description
-#import assets
-#import sitemap
-#import gzip_cache
+import assets
+import sitemap
+import gzip_cache
 
 MARKUP = ('md',)
 PLUGIN_PATHS = ['/home/entilzha/code/pelican-plugins', './plugins']
-PLUGINS = ['assets', 'sitemap', 'gzip_cache', 'ipynb.liquid']
+PLUGINS = [assets, sitemap, gzip_cache, 'ipynb.liquid']
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
