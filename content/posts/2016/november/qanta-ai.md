@@ -11,4 +11,4 @@ On October 25, 2016 I gave a guest lecture to the machine learning course at CU 
   <embed src="{filename}/static/talks/qb-ml-talk.pdf" width="100%" height="100%" type='application/pdf'></embed>
 </div>
 
-<a class="button small common-button" style="width:200px;" href="{filename}/static/talks/qb-ml.pdf" target="_blank">Download Slides</a>
+<a class="button small common-button" style="width:200px;" href="{filename}/static/talks/qb-ml-talk.pdf" target="_blank">Download Slides</a>
