@@ -7,7 +7,7 @@ import gzip_cache
 
 MARKUP = ('md',)
 PLUGIN_PATHS = ['/home/entilzha/code/pelican-plugins', './plugins']
-PLUGINS = [assets, sitemap, gzip_cache, 'ipynb.liquid']
+PLUGINS = [assets, sitemap, gzip_cache, 'ipynb.liquid', 'pubs']
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
