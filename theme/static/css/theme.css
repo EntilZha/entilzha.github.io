@@ -8535,7 +8535,7 @@ a:hover {
   .header-left .head-area {
     left: 0 !important;
     right: auto !important;
-  };
+  }
 }
 
 .site-head {
@@ -8630,7 +8630,7 @@ a:hover {
   }
 
   .site-head .blog-menu li a:hover {
-  };
+  }
 }
 
 .site-head .blog-menu li a:hover {
@@ -8963,6 +8963,26 @@ a:hover {
   .post-template .post .post-title {
     margin: -2.5rem -3.5rem 0;
   };
+}
+
+.index-divider {
+  background:#4a89dc;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .index-divider {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.index-divider h1 {
+  color: white;
+  text-align:center;
+  padding: 10px;
+  padding-bottom:5px;
 }
 
 .post-template .post .post-meta {
