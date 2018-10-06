@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -234,7 +234,6 @@ body {
   color: #222;
   padding: 0;
   margin: 0;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1826,7 +1825,6 @@ button,.button {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -2227,7 +2225,6 @@ meta.foundation-mq-topbar {
   color: #fff;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
   text-transform: none;
@@ -3235,7 +3232,6 @@ meta.foundation-mq-topbar {
   color: #eee;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
 }
 
 .pricing-table .price {
@@ -3245,7 +3241,6 @@ meta.foundation-mq-topbar {
   color: #333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
 }
 
 .pricing-table .description {
@@ -3715,7 +3710,6 @@ meta.foundation-mq-topbar {
   background: #efefef;
   color: #222;
   padding: 1rem 2rem;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
   font-size: 1rem;
 }
 
@@ -3864,7 +3858,6 @@ ul.pagination li {
   margin: 0;
   list-style-type: none;
   list-style-position: inside;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
 }
 
 .side-nav li {
@@ -3884,7 +3877,6 @@ ul.pagination li {
 .side-nav li.active>a:first-child:not(.button) {
   color: #67c3df;
   font-weight: normal;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
 }
 
 .side-nav li.divider {
@@ -3922,7 +3914,6 @@ ul.pagination li {
   color: #222;
   padding: 1rem;
   display: block;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
   font-size: 1rem;
 }
 
@@ -4176,7 +4167,6 @@ p aside {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #222;
@@ -5129,7 +5119,6 @@ dialog[open] {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 0.625rem;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999;
@@ -5170,7 +5159,6 @@ dialog[open] {
   z-index: 101;
   top: 0;
   left: 2.5%;
-  font-family: inherit;
   font-weight: normal;
   width: 95%;
 }
@@ -5336,7 +5324,6 @@ dialog[open] {
 
 .label {
   font-weight: normal;
-  font-family: "open sans","open sans",open sans,Arial,sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -6133,7 +6120,6 @@ span.postfix.radius,label.postfix.radius {
 input[type="text"],input[type="password"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="month"],input[type="week"],input[type="email"],input[type="number"],input[type="search"],input[type="tel"],input[type="time"],input[type="url"],textarea {
   -webkit-appearance: none;
   background-color: #fff;
-  font-family: inherit;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
   color: rgba(0,0,0,0.75);
@@ -8362,16 +8348,11 @@ th.hide-for-touch {
 }
 
 body {
-  font-family: "open sans", "helvetica neue", helvetica, arial, sans-serif;
   background: url("../images/main-background.jpg") repeat;
 }
 
 body>.row {
   max-width: 100%;
-}
-
-h1 {
-  font-family: "source sans pro", "helvetica neue", helvetica, arial, sans-serif;
 }
 
 button,.button,a,span,li,.head-area:after,hr,img,.read-more:before,main,.post {

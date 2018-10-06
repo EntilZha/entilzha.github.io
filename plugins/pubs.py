@@ -6,9 +6,25 @@ from jinja2 import Template
 
 
 template = """
-<h2>Refereed Publications</h2>
+<h2>Refereed</h2>
 <ul>
 {% for e in publications %}
+<li>
+{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}
+</li>
+{% endfor %}
+</ul>
+<h2>arXiv</h2>
+<ul>
+{% for e in arxiv %}
+<li>
+{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}
+</li>
+{% endfor %}
+</ul>
+<h2>Non-Refereed</h2>
+<ul>
+{% for e in non_refereed %}
 <li>
 {{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}
 </li>
@@ -59,8 +75,10 @@ class PublicationsReader(BaseReader):
             db = parser.parse_file(f)
             entries = [self._parse_entry(e) for e in db.entries]
             publications = [e for e in entries if e['type'] == 'publication']
+            arxiv = [e for e in entries if e['type'] == 'arxiv']
+            non_refereed = [e for e in entries if e['type'] == 'non-refereed']
             media = [e for e in entries if e['type'] == 'media']
-            html = Template(template).render(publications=publications, media=media)
+            html = Template(template).render(publications=publications, media=media, arxiv=arxiv, non_refereed=non_refereed)
         return html, parsed
 
     def _parse_entry(self, entry):

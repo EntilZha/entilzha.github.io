@@ -13,8 +13,8 @@
             }
         </script>
         <link rel="canonical" href="{{ SITEURL }}" />
-
-        {% assets filters="cssmin", output="css/theme.css", "css/pygments.css", "css/fonts.css" %}
+        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+        {% assets filters="cssmin", output="css/theme.css", "css/pygments.css" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
         {% endassets %}
     </head>
