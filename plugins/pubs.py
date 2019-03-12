@@ -38,7 +38,16 @@ template = """
 </li>
 {% endfor %}
 </ul>
+<h2>Course Projects</h2>
+<ul>
+{% for e in projects %}
+<li>
+{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}
+</li>
+{% endfor %}
+</ul>
 """
+
 
 def author_format(author):
     author = author.strip()
@@ -46,6 +55,7 @@ def author_format(author):
         return '<b>' + author + '</b>'
     else:
         return author
+
 
 def comma_join(authors):
     if not authors:
@@ -78,7 +88,14 @@ class PublicationsReader(BaseReader):
             arxiv = [e for e in entries if e['type'] == 'arxiv']
             non_refereed = [e for e in entries if e['type'] == 'non-refereed']
             media = [e for e in entries if e['type'] == 'media']
-            html = Template(template).render(publications=publications, media=media, arxiv=arxiv, non_refereed=non_refereed)
+            projects = [e for e in entries if e['type'] == 'project']
+            html = Template(template).render(
+                publications=publications,
+                media=media,
+                arxiv=arxiv,
+                non_refereed=non_refereed,
+                projects=projects
+            )
         return html, parsed
 
     def _parse_entry(self, entry):
@@ -101,6 +118,7 @@ class PublicationsReader(BaseReader):
 
 def add_reader(readers):
     readers.reader_classes['pubs'] = PublicationsReader
+
 
 def register():
     signals.readers_init.connect(add_reader)
