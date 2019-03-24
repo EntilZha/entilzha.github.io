@@ -8510,7 +8510,7 @@ a:hover {
 @media screen and (min-width: 64.063em) {
   .head-area {
     margin-top: 0;
-    padding: 0 1.1rem;
+    padding: 0;
   }
 
   .header-left .head-area {
@@ -8523,6 +8523,7 @@ a:hover {
   text-align: center;
   z-index: 2;
   position: relative;
+  padding-bottom: 7px;
 }
 
 .site-head .blog-description {
@@ -8575,7 +8576,7 @@ a:hover {
 .site-head .blog-menu {
   margin-bottom: 35px;
   margin: 0 auto;
-  width: 60%;
+  width: 100%;
   list-style: none;
   text-align: center;
 }
@@ -8716,7 +8717,7 @@ a:hover {
 }
 
 .main-column main {
-  max-width: 1000px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 1.5rem 0;
 }
@@ -9221,10 +9222,6 @@ a:hover {
   color: #276ecc;
 }
 
-.site-head-content {
-    padding-top: 25px;
-}
-
 .common-button {
     margin-bottom: 0;
     background: #4a89dc;
@@ -9254,4 +9251,15 @@ a:hover {
 
 .post-content .inner_cell div.text_cell_render {
     padding-left: 0;
+}
+.header-profile {
+  background: url(/theme/images/profile.png) center no-repeat;
+  background-size: 110%;
+  border: .5rem solid rgba(255,255,255,.2);
+  border-radius: 50% !important;
+  vertical-align: top;
+  height: 100%;
+  width: 200px;
+  display: inline-block;
+  margin-right: 80px;
 }

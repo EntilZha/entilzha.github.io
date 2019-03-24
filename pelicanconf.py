@@ -16,7 +16,7 @@ HOST = 'www.entilzha.io'
 
 PATH = 'content'
 
-TIMEZONE = 'America/Denver'
+TIMEZONE = 'US/Eastern'
 
 CURRENT_YEAR = date.today().year
 
@@ -31,6 +31,15 @@ AUTHOR_FEED_RSS = None
 
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+
+TAGS_SAVE_AS = ''
+TAG_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+ARCHIVES_SAVE_AS = ''
+ARCHIVE_SAVE_AS = ''
 
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}/index.html'
@@ -65,4 +74,3 @@ JINJA_FILTERS = {
 }
 
 MARKUP = ('md', )
-
