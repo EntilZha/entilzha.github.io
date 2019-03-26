@@ -8584,7 +8584,7 @@ a:hover {
 .site-head .blog-menu li {
   margin: .5rem 0 0 0;
   display: inline-block;
-  width: 100%;
+  width: auto;
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
@@ -8597,22 +8597,6 @@ a:hover {
   color: white;
   text-transform: uppercase;
   text-align: center;
-}
-
-@media screen and (min-width: 75em) {
-  .site-head .blog-menu li {
-    display: inline;
-    width: auto;
-  }
-
-  .site-head .blog-menu li a {
-    padding: 5px 30px;
-    display: inline-block;
-    width: auto;
-  }
-
-  .site-head .blog-menu li a:hover {
-  }
 }
 
 .site-head .blog-menu li a:hover {
@@ -9258,8 +9242,9 @@ a:hover {
   border: .5rem solid rgba(255,255,255,.2);
   border-radius: 50% !important;
   vertical-align: top;
-  height: 100%;
+  height: 200px;
   width: 200px;
   display: inline-block;
-  margin-right: 80px;
+  margin-right: 40px;
+  margin-left: 40px;
 }

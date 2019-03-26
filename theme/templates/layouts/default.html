@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-        <meta name="description" content="{% block metadescription %}Pedro Rodriguez: Research Scientist in Machine Learning and Natural Language Processing{% endblock %}">
+        <meta name="description" content="{% block metadescription %}Pedro Rodriguez: Research Scientist in Natural Language Processing{% endblock %}">
         <script type="text/javascript">
             var host = "{{ HOST }}";
             if ((host == window.location.host) && (window.location.protocol != "https:")) {
@@ -17,9 +17,12 @@
         {% assets filters="cssmin", output="css/theme.css", "css/pygments.css" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
         {% endassets %}
+        {% assets filters="cssmin", output="css/lightbox.css", "css/lightbox.css" %}
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+        {% endassets %}
     </head>
   <body {% block bodyclass %}{% endblock %}>
-    <div class="row">
+    <div class="row" style="min-width:620px">
         <div class="small-16 medium-16 large-16 columns head-area bgimage" style="background-image: url({{ SITEURL }}/theme/images/side-background.jpg)">
             {% include "partials/header.html" %}
         </div>
@@ -31,7 +34,7 @@
             </main>
         </div>
     </div>
-    {% assets filters="uglifyjs", output="js/uglify.jquery.min.js", "js/jquery.min.js", "js/targets.js" %}
+    {% assets filters="uglifyjs", output="js/uglify.jquery.min.js", "js/jquery.min.js", "js/targets.js", "js/lightbox.js" %}
     <script src="{{ SITEURL  }}/{{ ASSET_URL }}"></script>
     {% endassets %}
   </body>
