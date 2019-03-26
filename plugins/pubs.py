@@ -22,6 +22,14 @@ template = """
 </li>
 {% endfor %}
 </ul>
+<h2>Workshops</h2>
+<ul>
+{% for e in workshops %}
+<li>
+{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}
+</li>
+{% endfor %}
+</ul>
 <h2>Non-Refereed</h2>
 <ul>
 {% for e in non_refereed %}
@@ -86,6 +94,7 @@ class PublicationsReader(BaseReader):
             entries = [self._parse_entry(e) for e in db.entries]
             publications = [e for e in entries if e['type'] == 'publication']
             arxiv = [e for e in entries if e['type'] == 'arxiv']
+            workshops = [e for e in entries if e['type'] == 'workshop']
             non_refereed = [e for e in entries if e['type'] == 'non-refereed']
             media = [e for e in entries if e['type'] == 'media']
             projects = [e for e in entries if e['type'] == 'project']
@@ -94,7 +103,8 @@ class PublicationsReader(BaseReader):
                 media=media,
                 arxiv=arxiv,
                 non_refereed=non_refereed,
-                projects=projects
+                projects=projects,
+                workshops=workshops
             )
         return html, parsed
 
