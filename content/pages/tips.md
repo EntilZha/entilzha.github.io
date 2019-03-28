@@ -1,0 +1,65 @@
+Title: Tips
+Slug: tips
+Authors: Pedro Rodriguez
+Description: Random tips for myself and others
+
+Over my career I've made many mistakes, occasionally learn from them,
+sometimes find useful software/tips/resources, and such. I don't expect to
+remember all or even most of these so I compile everything here so that I
+have a quick and easy way to reference them on the web; hopefully in doing so it also turns
+out to be helpful for others as well.
+
+
+## Cheatsheets
+
+* [PDB Cheatsheet](static/pdf/pdb-cheatsheet.pdf) from [https://github.com/nblock/pdb-cheatsheet](https://github.com/nblock/pdb-cheatsheet)
+* [Pandas Cheatsheet](static/pdf/pandas-cheat-sheet.pdf) from [https://pandas.pydata.org/](https://pandas.pydata.org/
+)
+
+## Data Formats
+
+* Unless you have a *very good* reason and have purely numerical data, *never* use csv; saying a file is csv format is insufficient information to be able to parse the file
+* Default to [json](https://www.json.org/)
+* For large json files that are table-like (the root object is an array, and looks like rows), consider [JSON lines/jsonl](http://jsonlines.org/). Large JSON objects can be expensive to parse, and make it difficult to run parallel jobs (eg Apache Spark uses line delimited rows from text files)
+
+## Software
+* [Zotero for organizing research papers](https://www.zotero.org/)
+* [MLFlow for experiment tracking](https://mlflow.org/)
+* [Glances, a better top/htop](https://nicolargo.github.io/glances/) (be sure to `pip install nvidia-ml-py3` for GPU support)
+* [Plotnine for figures](https://plotnine.readthedocs.io)
+* [draw.io for diagrams](https://draw.io)
+* [Apache Spark for "Big Data"](https://spark.apache.org/)
+* I use [Arch Linux](https://www.archlinux.org/) on machines I own.
+* [bat: cat replacement](https://github.com/sharkdp/bat)
+* [exa: ls replacement](https://the.exa.website/)
+* [linuxbrew: package manager when I don't have sudo](https://docs.brew.sh/Homebrew-on-Linux)
+
+
+## Libraries
+
+### Python
+
+* For small APIs, [Flask](http://flask.pocoo.org/), for anything more [Django](https://www.djangoproject.com/)
+* Static site (like this page) [Pelican](https://docs.getpelican.com/en/stable/)
+
+## Tips from Others
+* [Style guide from my advisor](http://users.umiacs.umd.edu/~jbg/static/style.html)
+
+## Docs
+
+* [Slurm sbatch](https://slurm.schedmd.com/sbatch.html)
+
+## Configs
+
+* [Dotfiles](https://github.com/EntilZha/dotfiles)
+* [vimrc](https://github.com/EntilZha/dotfiles/blob/master/vimrc)
+
+
+## Wiki
+* [CLIP Homepage](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page)
+* [CLIP Wiki](https://wiki.umiacs.umd.edu/clip/clipwiki/index.php)
+
+## LaTeX
+
+* What is `~`? Non-breaking space, LaTeX will not break lines between alpha and beta in `alpha~beta`
+* Create PDF version of figures

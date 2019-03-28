@@ -8433,7 +8433,7 @@ a:hover {
 .blog-network {
   padding-bottom: 15px;
   display: inline-block;
-  margin-top: 8px;
+  margin-top: 0px;
 }
 
 
@@ -8587,12 +8587,13 @@ a:hover {
   width: auto;
   margin-right: 0.5%;
   margin-left: 0.5%;
+  margin-top: 0;
 }
 
 .site-head .blog-menu li a {
   display: inline-block;
   width: 100%;
-  padding: 5px 30px;
+  padding: 6.5px 30px;
   background: #333;
   color: white;
   text-transform: uppercase;
