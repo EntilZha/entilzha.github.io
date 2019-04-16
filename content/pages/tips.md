@@ -63,3 +63,7 @@ out to be helpful for others as well.
 
 * What is `~`? Non-breaking space, LaTeX will not break lines between alpha and beta in `alpha~beta`
 * Create PDF version of figures
+
+## Debugging
+
+* Anaconda pip installations from source packages causing g++ errors like "file format not recognized", rename anaconda's `ld` to `ld_` so that pip uses the system version [https://github.com/pytorch/pytorch/issues/16683#issuecomment-459982988](https://github.com/pytorch/pytorch/issues/16683#issuecomment-459982988)
