@@ -74,3 +74,4 @@ JINJA_FILTERS = {
 }
 
 MARKUP = ('md', )
+
