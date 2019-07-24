@@ -55,9 +55,17 @@ out to be helpful for others as well.
 * [vimrc](https://github.com/EntilZha/dotfiles/blob/master/vimrc)
 
 
-## Wiki
+## UMD CLIP Resources
+
+### Links
 * [CLIP Homepage](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page)
 * [CLIP Wiki](https://wiki.umiacs.umd.edu/clip/clipwiki/index.php)
+
+### Storage
+
+UMIACS offers long term file storage and hosting through [object stores](https://obj.umiacs.umd.edu/obj/) using a set of [s3-like utilities](https://gitlab.umiacs.umd.edu/staff/umobj/tree/master).
+Specific to the `clip-quiz` group, you should mirror the layout of `/fs/clip-quiz` and the contents of the `clip-quiz` bucket to make storing/restoring files easy.
+For example, moving a file `/fs/clip-quiz/code/old-big-project/` could be done using: `cpobj -V -r -f /fs/clip-quiz/code/old-big-project clip-quiz:code/`
 
 ## LaTeX
 
