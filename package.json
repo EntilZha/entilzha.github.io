@@ -1,0 +1,24 @@
+{
+  "name": "entilzha.github.io",
+  "version": "1.0.0",
+  "description": "To build my website there are two commands to run. For my sanity, I've encoded all the dependencies in a Dockerfile so the website can be fully built from that.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EntilZha/entilzha.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EntilZha/entilzha.github.io/issues"
+  },
+  "homepage": "https://github.com/EntilZha/entilzha.github.io#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
+}

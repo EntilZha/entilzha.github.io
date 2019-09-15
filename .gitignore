@@ -1,3 +1,4 @@
 output/
 *.pid
 *.pyc
+node_modules/

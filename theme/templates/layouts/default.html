@@ -37,5 +37,13 @@
     {% assets filters="uglifyjs", output="js/uglify.jquery.min.js", "js/jquery.min.js", "js/targets.js", "js/lightbox.js" %}
     <script src="{{ SITEURL  }}/{{ ASSET_URL }}"></script>
     {% endassets %}
+    {% if DEBUG_MODE %}
+    <script src="/theme/js/react.development.js" crossorigin></script>
+    <script src="/theme/js/react-dom.development.js" crossorigin></script>
+    <script src="/theme/js/babel.min.js"></script>
+    {% else %}
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    {% endif %}
   </body>
 </html>
