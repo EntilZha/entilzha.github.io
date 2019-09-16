@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
+
+
 docker run -t -v /home/entilzha/code/entilzha.github.io:/entilzha.github.io -u `id -u $USER` pelican pelican $@
+

@@ -2,3 +2,5 @@ output/
 *.pid
 *.pyc
 node_modules/
+.pytest_cache
+.vscode

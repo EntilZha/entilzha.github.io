@@ -2,28 +2,17 @@ import json
 import datetime
 from pelican import signals
 from pelican.readers import BaseReader
+from plugins.react import compile_jsx
 from bibtexparser.bparser import BibTexParser
-from jinja2 import Template
+from jinja2 import Template, Environment
 
 
-with open('theme/templates/partials/bibtex_entry.jsx') as f:
-    jsx = f"""
-<script type="text/babel">
-    {f.read()}
-</script>
-"""
-
-
-template = jsx + """
-<script type="text/javascript">
-const publications = {{ publications }};
-const arxiv = {{ arxiv }};
-</script>
+template = """
 <h2>Refereed</h2>
 <ul>
 {% for e in publications %}
 <li>
-<div class="bibtex" data-authors="{{ e.authors }}" data-url="{{ e.url }}" data-title="{{ e.title }}" data-source="{{ e.source }}" data-year="{{ e.year }}"></div>
+<div>{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}. <span class="bibtex" data-entry="{{ e.cite }}"></span></div>
 </li>
 {% endfor %}
 </ul>
@@ -31,7 +20,7 @@ const arxiv = {{ arxiv }};
 <ul>
 {% for e in arxiv %}
 <li>
-<div>{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}</div>
+<div>{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}.</div>
 </li>
 {% endfor %}
 </ul>
@@ -39,7 +28,7 @@ const arxiv = {{ arxiv }};
 <ul>
 {% for e in workshops %}
 <li>
-<div>{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}</div>
+<div>{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}.</div>
 </li>
 {% endfor %}
 </ul>
@@ -47,7 +36,7 @@ const arxiv = {{ arxiv }};
 <ul>
 {% for e in non_refereed %}
 <li>
-<div>{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}</div>
+<div>{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}.</div>
 </li>
 {% endfor %}
 </ul>
@@ -55,7 +44,7 @@ const arxiv = {{ arxiv }};
 <ul>
 {% for e in media %}
 <li>
-{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}
+{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}.
 </li>
 {% endfor %}
 </ul>
@@ -63,10 +52,11 @@ const arxiv = {{ arxiv }};
 <ul>
 {% for e in projects %}
 <li>
-{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}
+{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}.
 </li>
 {% endfor %}
 </ul>
+{{ 'theme/templates/partials/bibtex_entry.jsx' | compile_jsx }}
 """
 
 
@@ -111,7 +101,9 @@ class PublicationsReader(BaseReader):
             non_refereed = [e for e in entries if e['type'] == 'non-refereed']
             media = [e for e in entries if e['type'] == 'media']
             projects = [e for e in entries if e['type'] == 'project']
-            html = Template(template).render(
+            jinja_env = Environment()
+            jinja_env.filters['compile_jsx'] = compile_jsx
+            html = jinja_env.from_string(template).render(
                 publications=publications,
                 media=media,
                 arxiv=arxiv,
@@ -130,12 +122,13 @@ class PublicationsReader(BaseReader):
         elif 'journal' in entry:
             is_journal = entry['ENTRYTYPE'] == 'article'
             source = entry['journal']
-            volume = entry['volume']
+            volume = entry.get('volume', '')
         else:
             source = ''
             volume = ''
         parsed_entry = {
             'authors': comma_join(authors),
+            'bib_authors': entry['author'],
             'url': entry['url'],
             'title': entry['title'],
             'year': entry['year'],
@@ -149,21 +142,34 @@ class PublicationsReader(BaseReader):
         return parsed_entry
 
     def _entry_to_bibtex(self, entry, is_journal):
+        bibtex_key = entry['id']
+        if bibtex_key.startswith('@'):
+            bibtex_key = bibtex_key[1:]
         if is_journal:
-            return journal_template.format(
-                bibtex_key=entry['id'],
-                title=entry['title'],
-                author=entry['authors'],
-                journal=entry['source'],
-                year=entry['year'],
-                volume=entry['volume'],
-                url=entry['url']
-            )
+            if entry['type'] == 'arxiv':
+                return arxiv_template.format(
+                    bibtex_key=bibtex_key,
+                    title=entry['title'],
+                    author=entry['bib_authors'],
+                    journal=entry['source'],
+                    year=entry['year'],
+                    url=entry['url']
+                )
+            else:
+                return journal_template.format(
+                    bibtex_key=bibtex_key,
+                    title=entry['title'],
+                    author=entry['bib_authors'],
+                    journal=entry['source'],
+                    year=entry['year'],
+                    volume=entry['volume'],
+                    url=entry['url']
+                )
         else:
             return booktitle_template.format(
-                bibtex_key=entry['id'],
+                bibtex_key=bibtex_key,
                 title=entry['title'],
-                author=entry['authors'],
+                author=entry['bib_authors'],
                 booktitle=entry['source'],
                 year=entry['year'],
                 url=entry['url']
@@ -171,8 +177,7 @@ class PublicationsReader(BaseReader):
 
 
 
-journal_template = """
-@article{{{bibtex_key},
+journal_template = """@article{{{bibtex_key},
     Title = {{{title}}},
     Author = {{{author}}},
     Journal = {{{journal}}},
@@ -181,8 +186,14 @@ journal_template = """
     Url = {{{url}}},
 }}"""
 
-booktitle_template = """
-@inproceedings{{{bibtex_key},
+arxiv_template = """@article{{{bibtex_key},
+    Title = {{{title}}},
+    Author = {{{author}}},
+    Year = {{{year}}},
+    Url = {{{url}}},
+}}"""
+
+booktitle_template = """@inproceedings{{{bibtex_key},
     Title = {{{title}}},
     Author = {{{author}}},
     Booktitle = {{{booktitle}}},
@@ -190,8 +201,7 @@ booktitle_template = """
     Url = {{{url}}},
 }}"""
 
-online_template = """
-@online{{{bibtex_key},
+online_template = """@online{{{bibtex_key},
     Title = {{{title}}},
     Author = {{{author}}},
     Year = {{{year}}},

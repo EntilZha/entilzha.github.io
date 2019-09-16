@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 from datetime import date
+import subprocess
 from filters import blog_date_format, default_description
 import assets
 import sitemap
 import gzip_cache
 
+
 MARKUP = ('md',)
 PLUGIN_PATHS = ['/home/entilzha/code/pelican-plugins', './plugins']
-PLUGINS = [assets, sitemap, gzip_cache, 'ipynb.liquid', 'pubs']
+PLUGINS = [assets, sitemap, gzip_cache, 'ipynb.liquid', 'pubs', 'react']
 
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
@@ -70,7 +72,7 @@ DEBUG_MODE = True
 
 JINJA_FILTERS = {
     'blog_date_format': blog_date_format,
-    'default_description': default_description
+    'default_description': default_description,
 }
 
 MARKUP = ('md', )
