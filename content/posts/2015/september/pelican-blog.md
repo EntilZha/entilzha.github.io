@@ -9,12 +9,12 @@ The (PhD) intern application season fast approaching which means its about time 
 and cvs out there, including mine. In the process of working on my website, I decided to switch my hosting and workflow.
 
 Before my recent changes, I had two websites: a [Ghost](https://ghost.org/) blog at
-[www.entilzha.io](https://www.entilzha.io) and a resume site at [cv.pedrorodriguez.io](http://cv.pedrorodriguez.io).
+[www.pedro.ai](https://www.pedro.ai) and a resume site at [cv.pedrorodriguez.io](http://cv.pedrorodriguez.io).
 I didn't like the first because it costs money to host (I am now a "poor" grad student, so finding
 savings here and there is *very nice*). Second, I didn't want to invest the time to learn Ghost's templating system, and
 keep the server updated to prevent all those
 [nasty security bugs](http://www.wired.com/2014/12/most-dangerous-software-bugs-2014/). Lastly, my career site and
-actual resume fell far out of sync. It is much better to maintain only a [resume](https://www.entilzha.io/resume.pdf)
+actual resume fell far out of sync. It is much better to maintain only a [resume](https://www.pedro.ai/resume.pdf)
 and point to it from here.
 
 Roughly speaking, the website portion involved:

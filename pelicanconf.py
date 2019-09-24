@@ -14,7 +14,7 @@ PLUGINS = [assets, sitemap, gzip_cache, 'ipynb.liquid', 'pubs', 'react']
 AUTHOR = u'Pedro Rodriguez'
 SITENAME = u'Pedro Rodriguez'
 SITEURL = 'http://localhost:8000'
-HOST = 'www.entilzha.io'
+HOST = 'www.pedro.ai'
 
 PATH = 'content'
 
