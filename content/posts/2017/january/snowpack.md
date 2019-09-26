@@ -6,5 +6,9 @@ Author: Pedro Rodriguez
 
 In this snowpack lecture from an avalanche level 1 course organized by the <a href="http://bmnsp.org">Bryan Mountain Nordic Ski Patrol</a> I talk about the ways that the snowpack changes over time, and how that impacts avalanche safety.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3fYxUW3T6YE" frameborder="0" allowfullscreen></iframe>
+<div style="width:560px;margin: 0 auto;">
+<h4 style="text-align:center;"><a href="https://www.youtube.com/watch?v=3fYxUW3T6YE" target="_blank">Click Image to Watch</a></h4>
+<a href="https://www.youtube.com/watch?v=3fYxUW3T6YE" target="_blank">
+<img src="/static/thumbnails/snowpack-preview.jpg"></a>
+</div>
 
