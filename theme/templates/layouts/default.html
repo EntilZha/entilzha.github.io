@@ -13,7 +13,7 @@
             }
         </script>
         <link rel="canonical" href="{{ SITEURL }}" />
-        {% assets filters="cssmin", output="css/style.min.css", "css/theme.css", "css/pygments.css", "css/lightbox.css", "css/bootstrap.min.css", "css/fira.css" %}
+        {% assets filters="cssmin", output="css/style.min.css", "css/theme.css", "css/pygments.css", "css/bootstrap.min.css", "css/fira.css" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
         {% endassets %}
         <script type="text/javascript">
@@ -44,8 +44,5 @@
             </main>
         </div>
     </div>
-    {% assets filters="uglifyjs", output="js/uglify.jquery.min.js", "js/jquery.min.js", "js/targets.js", "js/lightbox.js" %}
-    <script src="{{ SITEURL  }}/{{ ASSET_URL }}"></script>
-    {% endassets %}
   </body>
 </html>
