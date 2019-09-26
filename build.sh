@@ -14,3 +14,4 @@ cd ..
 export PYTHONPATH="${PYTHONPATH}:pelican-plugins"
 
 pelican content -o output -s publishconf.py
+cp _redirects output/
