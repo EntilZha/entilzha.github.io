@@ -9238,7 +9238,7 @@ a:hover {
     padding-left: 0;
 }
 .header-profile {
-  background: url(/theme/images/profile.png) center no-repeat;
+  background: url(/theme/images/profile.jpg) center no-repeat;
   background-size: 110%;
   border: .5rem solid rgba(255,255,255,.2);
   border-radius: 50% !important;
