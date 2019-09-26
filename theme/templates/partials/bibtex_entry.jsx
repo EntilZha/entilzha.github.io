@@ -29,7 +29,8 @@ class BibtexEntry extends React.Component {
     }
   }
 }
-
-for (const e of document.getElementsByClassName("bibtex")) {
-  ReactDOM.render(<BibtexEntry entry={e.dataset.entry} />, e);
-}
+docReady(function() {
+  for (const e of document.getElementsByClassName("bibtex")) {
+    ReactDOM.render(<BibtexEntry entry={e.dataset.entry} />, e);
+  }
+});

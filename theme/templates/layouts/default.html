@@ -21,14 +21,25 @@
         {% assets filters="cssmin", output="css/lightbox.css", "css/lightbox.css" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
         {% endassets %}
-        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+        <script type="text/javascript">
+        function docReady(fn) {
+            // see if DOM is already available
+            if (document.readyState === "complete" || document.readyState === "interactive") {
+                // call on next available tick
+                setTimeout(fn, 1);
+            } else {
+                document.addEventListener("DOMContentLoaded", fn);
+            }
+        } 
+        </script>
     </head>
   <body {% block bodyclass %}{% endblock %}>
     <div class="row" style="min-width:640px">
         <div class="small-16 medium-16 large-16 columns head-area bgimage" style="background-image: url({{ SITEURL }}/theme/images/side-background.jpg)">
             {% include "partials/header.html" %}
         </div>
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
         <div class="small-16 medium-16 large-16 columns main-column">
             <main class="content" role="main">
                 {% block content %}
