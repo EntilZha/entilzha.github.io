@@ -74,4 +74,6 @@ For example, moving a file `/fs/clip-quiz/code/old-big-project/` could be done u
 
 ## Debugging
 
+* `ipdb` and `pdb` are fantastic for command line debugging
+* To start debugger on if allennlp errors: `ipython -m (which allennlp) -- train config.jsonnet` and press `c` to continue when terminal starts
 * Anaconda pip installations from source packages causing g++ errors like "file format not recognized", rename anaconda's `ld` to `ld_` so that pip uses the system version [https://github.com/pytorch/pytorch/issues/16683#issuecomment-459982988](https://github.com/pytorch/pytorch/issues/16683#issuecomment-459982988)
