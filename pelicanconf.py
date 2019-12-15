@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from datetime import date
 import subprocess
-from filters import blog_date_format, default_description
+from filters import blog_date_format, default_description, news
 import assets
 import sitemap
 import gzip_cache
@@ -30,6 +30,9 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+INDEX_URL = 'blog'
+INDEX_SAVE_AS = 'blog/index.html'
 
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
@@ -73,6 +76,7 @@ DEBUG_MODE = True
 JINJA_FILTERS = {
     'blog_date_format': blog_date_format,
     'default_description': default_description,
+    'news': news
 }
 
 MARKUP = ('md', )

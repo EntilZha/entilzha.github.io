@@ -4,15 +4,8 @@
 
 {% block content %}
 
-<article class="post">
-  <div>
-    <header class="post-header">
-    </header>
-      {% include "partials/summary.html" %}
-  </div>
-</article>
 <div class="index-divider">
-  <h1>News and Blog</h1>
+  <h1>Blog</h1>
 </div>
 {% for article in articles_page.object_list %}
 <article class="post">

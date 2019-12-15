@@ -4944,7 +4944,7 @@ a:hover {
   background: #4a89dc;
   color: white;
   margin: -1.5rem -1.5rem 0;
-  padding: 1.5rem;
+  padding: .8rem;
 }
 
 @media screen and (min-width: 64.063em) {
@@ -5275,4 +5275,34 @@ a:hover {
   display: inline-block;
   margin-right: 40px;
   margin-left: 40px;
+}
+.page-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.header-container {
+  display: block;
+}
+@media only screen and (min-width:64.063em) {
+  .header-container {
+    display: inline-block;
+  }
+}
+
+.float-box {
+  background:#fff;
+  overflow: hidden;
+  padding: 1.5em;
+  margin-bottom: 1.5rem;
+  border-bottom: #4a89dc 2px solid;
+  position: relative;
+  -moz-box-shadow: 0 0 25px 0 rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+.float-box ul {
+  font-size: .8rem;
 }
