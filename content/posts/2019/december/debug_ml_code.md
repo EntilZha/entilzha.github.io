@@ -167,6 +167,6 @@ $ tree
 2 directories, 5 files
 ```
 
-Hopefully you'll find at least some of these tricks helpful for efficiently developing your own models!
+Hopefully you'll find some of these tricks helpful for efficiently developing your own models!
 Thanks to [Joe Barrow](https://jbarrow.ai/) for the discussion inspiring the post and to [Shi Feng](http://users.umiacs.umd.edu/~shifeng/) for edits and comments.
-In my next post I'll briefly describe how I use [Semantic Scholar](https://www.semanticscholar.org/) for writing literature review or related work sections in papers.
+In my next post I'll briefly describe how I use [Semantic Scholar](https://www.semanticscholar.org/) for writing literature reviews or related work sections in papers.
