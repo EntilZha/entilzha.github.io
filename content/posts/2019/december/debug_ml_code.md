@@ -8,6 +8,14 @@ Developing new machine learning code is often error prone and takes many iterati
 In this context, I specifically refer to saving time fixing errors that crash the program--not than those that cause models to be incorrect in subtle ways (for that, see [Andrej Karpathy's blog post](https://karpathy.github.io/2019/04/25/recipe/)).
 Here are a few tricks I use to preserve my sanity while developing new model code written in python.
 
+A quick outline of the tips:
+
+1. Debuggers
+2. Document tensor shapes
+3. Verbose logging with `logging` module
+4. Debugging dataset
+5. Unit tests
+
 ### Use Debuggers
 
 Modern machine learning code often contains several abstraction levels---a good thing!---which unfortunately makes it more difficult to dig deep into plumbing to fix data loading or tensor shape errors.
@@ -25,7 +33,7 @@ Sidenote: I use `ipdb` instead of `pdb` since its more similar to the `ipython` 
 ### Document Tensor Shapes
 
 Its extremely helpful to know tensor shapes during development and helps reduce time when looking at code again.
-Here are is a sample forward pass of a pytorch model with shape annotations:
+Here is a sample forward pass of a pytorch model with shape annotations:
 
 ```python
 def forward(self, text, length):
@@ -57,7 +65,7 @@ Although it takes some setup, there are several benefits to using `logging.info`
 1. Timestamps are logged "for free" which is helpful to understanding where most of the execution time is spent.
 2. Logging can be configured to output the module a statement is from which makes debugging faster.
 3. Logging can also be configured to write to a file. This has saved me a few times when I didn't expect to need `print` output when I ran the model, but later needed it.
-4. This leads me to: be verbose in what you log. I love that the logging in [allennlp](https://allennlp.org) includes things like model parameters.
+4. This leads me to: be verbose in what you log. I love that the logging in [allennlp](https://allennlp.org) includes things like model parameters ([Sample Log](https://gist.github.com/EntilZha/dce35a2b533a1ddea74f8c40092ba599)).
 
 I typically include this code in my package for logging to the standard error and a file
 
@@ -159,4 +167,6 @@ $ tree
 2 directories, 5 files
 ```
 
-That's all I got, hope its helpful!
+Hopefully you'll find at least some of these tricks helpful for efficiently developing your own models!
+Thanks to [Joe Barrow](https://jbarrow.ai/) for the discussion inspiring the post and to [Shi Feng](http://users.umiacs.umd.edu/~shifeng/) for edits and comments.
+In my next post I'll briefly describe how I use [Semantic Scholar](https://www.semanticscholar.org/) for writing literature review or related work sections in papers.

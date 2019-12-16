@@ -4,3 +4,4 @@ output/
 node_modules/
 .pytest_cache
 .vscode
+.idea
