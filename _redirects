@@ -5,3 +5,4 @@ https://entilzha.io/* https://www.pedro.ai/:splat 301!
 https://entilzha.netlify.com/* https://www.pedro.ai/:splat 301!
 /api/*  http://trantor.entilzha.io/api/:splat  200
 /about https://www.pedro.ai/ 301!
+/rustdocs/* https://doc.rust-lang.org/stable/std/?search=:splat 301!
