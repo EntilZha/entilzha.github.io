@@ -3,17 +3,16 @@ Date: 2020-3-24
 Tags: machine learning,engineering
 Slug: reproducible-ml-and-parameter-sweeps
 Author: Pedro Rodriguez
-Status: draft
 
 In the past couple weeks I've been working on writing machine learning code in python with the following goals:
 
-1. Make experiments easy to reproduce (or retroactively debug). Primarily, this means saving the configuration and the code as it was at the time it was run.
-2. Make hyper parameter sweeps and running multiple trials of the same parameters easy to do.
+1. Make experiments easy to reproduce (or retroactively debug). Primarily, this means saving the configuration *and* the code as it was at the time it was run.
+2. Make it easy to run hyper parameter sweeps and multiple trials of the same parameters.
 
-I've done both in the past, but have never really been satisfied with my prior approaches.
+I've done both in the past, but I've never been satisfied with my prior approaches.
 Thankfully, I think I've learned from the mistakes I made before and found a nice solution.
-The general approach is generalizable to any experiment setup, but I've made some specializations to my specific use case using [allennlp](https://github.com/allenai/allennlp).
-Overall, my solution amounts to a python script of about 150 lines plus some configuration files. I'll refer to that as `hyper.py` and include its contents later on. Here is the general approach:
+The approach is generalizable to any experiment setup, but I've made some specializations to my specific use case using [allennlp](https://github.com/allenai/allennlp).
+Overall, my solution amounts to a python script of about 150 lines plus some configuration files. I'll refer to that as `hyper.py` and include its contents later on. Here is the approach:
 
 1. Define a configuration file for a class of model (e.g., bert) that defines a hyper parameter sweep.
 2. In the case of `allennlp`, hyper parameters for a specific experiment are defined in a `json` or `jsonnet` file. I have a base configuration which the parameter values from (1) fill.
@@ -101,7 +100,7 @@ There are a few things to note:
 2. I define parameters to sweep over in `hyper`. For now, my code performs an exhaustive grid, but that could be changed.
 3. I added extra information for `slurm` that will be helpful since the UMD compute cluster has varying queue times that have different restrictions of number of jobs and runtime limit.
 
-The last thing we'll need as a valid `allennlp` config which for my model (and code) is:
+The last thing we'll need as a valid `allennlp` config which for my model is:
 
 ```jsonnet
 function(lr=0.001, dropout=0.25, hidden_dim=1500, n_hidden_layers=1, debug=false) {
