@@ -12,7 +12,10 @@ In the past couple weeks I've been working on writing machine learning code in p
 I've done both in the past, but I've never been satisfied with my prior approaches.
 Thankfully, I think I've learned from the mistakes I made before and found a nice solution.
 The approach is generalizable to any experiment setup, but I've made some specializations to my specific use case using [allennlp](https://github.com/allenai/allennlp).
-Overall, my solution amounts to a python script of about 150 lines plus some configuration files. I'll refer to that as `hyper.py` and include its contents later on. Here is the approach:
+Overall, my solution amounts to a python script of about 150 lines plus some configuration files. I'll refer to that as `hyper.py` and include its contents later on.
+I plan on open sourcing the whole project I'm working on with this, but for now I've put the `hyper.py` script in a gist.
+
+Here is the approach:
 
 1. Define a configuration file for a class of model (e.g., bert) that defines a hyper parameter sweep.
 2. In the case of `allennlp`, hyper parameters for a specific experiment are defined in a `json` or `jsonnet` file. I have a base configuration which the parameter values from (1) fill.
@@ -257,6 +260,8 @@ The first part of the main function handles creating the directories while the s
 Below is the `hyper.py` script which I've commented since its probably easier to explain inline than interspersing prose and code.
 
 ```python
+# If you're unfamiliar with click, its a library for making CLIs
+# https://click.palletsprojects.com/en/7.x/
 @click.command()
 @click.option("--slurm-job/--no-slurm-job", is_flag=True, default=True)
 @click.argument("hyper_conf_path")
@@ -352,5 +357,8 @@ python qb/main.py train $2
 ```
 
 With that, this is how I've been defining and running larger parameter sweeps.
-For experiment tracking, I've been using [comet.ml](https://comet.ml), but I'll discuss integrating that with `allennlp` in a future post.
+For experiment tracking, I've been using [comet.ml](https://comet.ml) with the [callback trainer](https://github.com/allenai/allennlp/blob/v0.9.0/allennlp/training/callback_trainer.py) which I'll discuss in a future post.
+Also for the future, I'd like to look into going beyond grid search by integrating with something like [allentune](https://github.com/allenai/allentune) since I'm already using `allennlp`.
+My hunch is that I can push down parameter search down to `allentune` and figure out how to integrate their [ray-based](https://github.com/ray-project/ray) parallelization with the slurm cluster UMD uses.
+
 Thanks for reading and hope this helps someone out there to make natural language processing or machine learning experiments more reproducible.
