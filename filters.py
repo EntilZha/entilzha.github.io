@@ -11,9 +11,10 @@ def news(_):
     import markdown
     html = markdown.markdown(
 """
+* [Blog post on Reproducible ML](/blog/2020/03/24/reproducible-ml-and-parameter-sweeps/)
 * [Blog post on Debugging ML Code](/blog/2019/12/15/debug-ml-code/)
-* Started [Google AI](https://ai.google/research/)-Zurich winter research internship!
-* Completed [Facebook Conversational AI](https://ai.facebook.com/) summer research internship
+* Finished [Google AI](https://ai.google/research/)-Zurich winter research internship!
+* Finished [Facebook Conversational AI](https://ai.facebook.com/) summer research internship
 * [TACL Paper](https://www.pedro.ai/static/publications/2019_tacl_trick.pdf) on Adversarial Question Generation
 """)
     return html

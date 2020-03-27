@@ -13,7 +13,7 @@ I've done both in the past, but I've never been satisfied with my prior approach
 Thankfully, I think I've learned from the mistakes I made before and found a nice solution.
 The approach is generalizable to any experiment setup, but I've made some specializations to my specific use case using [allennlp](https://github.com/allenai/allennlp).
 Overall, my solution amounts to a python script of about 150 lines plus some configuration files. I'll refer to that as `hyper.py` and include its contents later on.
-I plan on open sourcing the whole project I'm working on with this, but for now I've put the `hyper.py` script in a gist.
+I plan on open sourcing the whole project I'm working on with this, but for now I've put the `hyper.py` [script in a gist](https://gist.github.com/EntilZha/b6034de3d2d0e6e2bd3e595e91aade69).
 
 Here is the approach:
 
