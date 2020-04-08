@@ -42,6 +42,13 @@ out to be helpful for others as well.
 * For small APIs, [Flask](http://flask.pocoo.org/), for anything more [Django](https://www.djangoproject.com/)
 * Static site (like this page) [Pelican](https://docs.getpelican.com/en/stable/)
 
+### Natural Language Processing
+* [Allennlp](https://github.com/allenai/allennlp) is an amazing library for natural language processing, use it!
+
+#### AllenNLP Tips
+
+* `allennlp` sets [random seeds](https://github.com/allenai/allennlp/blob/v0.9.0/allennlp/common/util.py#L177) deterministically which helps improve reproducibility of experiments. Occasionally, when doing things like running multiple trials of identical hyper parameters, this behavior causes results for each trial to be identical. In these cases, its helpful to manually specify a random seed; for example using the trial number as the random seed.
+
 ## Tips from Others
 * [Style guide from my advisor](http://users.umiacs.umd.edu/~jbg/static/style.html)
 
