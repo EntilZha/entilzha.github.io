@@ -34,6 +34,9 @@ out to be helpful for others as well.
 * [exa: ls replacement](https://the.exa.website/)
 * [linuxbrew: package manager when I don't have sudo](https://docs.brew.sh/Homebrew-on-Linux)
 
+## Web Tools
+* [PetScan: Tool Searching for Wiki Pages with Complex Queires](https://petscan.wmflabs.org/), [Manual](https://meta.wikimedia.org/wiki/PetScan/en)
+
 
 ## Libraries
 
