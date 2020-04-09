@@ -37,6 +37,10 @@ out to be helpful for others as well.
 ## Web Tools
 * [PetScan: Tool Searching for Wiki Pages with Complex Queires](https://petscan.wmflabs.org/), [Manual](https://meta.wikimedia.org/wiki/PetScan/en)
 
+## Hardware for Better Internet
+* In general, try to use hardwire ethernet
+* Option 1: Use a very long ethernet cable with [No Damage Wall Hangers](https://www.amazon.com/slp/no-damage-wall-hangers/6n75kefycjaf38m)
+* Option 2: [Ethernet over Powerline Network Adaptors](https://www.amazon.com/Powerline-Computer-Network-Adapters/b?ie=UTF8&node=1194444) are magical and work extremeley well. Personally, I bought the "TP-Link AV2000 Powerline Adapter"
 
 ## Libraries
 
