@@ -8,7 +8,7 @@ save_as: index.html
 I am a 5th year PhD candidate in Computer Science at the [University of Maryland at College Park](http://www.cs.umd.edu/).
 I work in the [Computational Linguistics and Information Processing (CLIP) Lab](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page) with [Jordan Boyd-Graber](http://www.umiacs.umd.edu/~jbg/).
 My research interests center around creating datasets and machine-learning models for knowledge-centered natural language processing.
-In particular, I am interested in question answering, conversational information-seeking, and building better datasets.
+In particular, I am interested in question answering and conversational information-seeking.
 I expect to graduate from the PhD program between December 2020 and May 2021.
 In my free time, I am an avid skier, climber, and hiker. 
 
@@ -19,9 +19,9 @@ Contact me through <a target="_blank" href="https://mailhide.io/e/wbfjM">email</
 
 ## Industry Experience
 
-Throughout my undergraduate and graduate studies I have interned extensively and accumulated a little over three years of industry experience. Currently, I am a research intern at [Google AI-Zürich](https://ai.google/research/join-us/zurich/) working on question answering and fact verification.
+Throughout my undergraduate and graduate studies I have interned extensively and accumulated over three years of industry experience. I was a research intern at [Google AI-Zürich](https://ai.google/research/join-us/zurich/) working on question answering and fact verification during Winter 2019/20.
 At [Facebook Conversational AI](https://ai.facebook.com/research/conversational-ai) I worked on conversational information seeking (paper in-submission).
-I also worked at [Microsoft Research](https://www.microsoft.com/en-us/research) in the [Information and Data Science Group](https://www.microsoft.com/en-us/research/group/information-and-data-sciences/).
+During summer 2018 I was a resarch intern at [Microsoft Research](https://www.microsoft.com/en-us/research) in the [Information and Data Science Group](https://www.microsoft.com/en-us/research/group/information-and-data-sciences/).
 I was a data science intern at [Riot Games](https://youtu.be/jsRVA-HXZQc) and [Oracle/Datalogix](https://cloud.oracle.com/data-cloud).
 Prior to starting my PhD, I was a data scientist at [Zillow Group/Trulia](https://www.trulia.com/about/careers/).
 
@@ -34,7 +34,7 @@ During my undergraduate degree, I was a research assistant in [UC Berkeley's AMP
 ## Service and Certifications
 
 * ACL 2019 Assistant Reviewer
-* I was a founding member of the [Colorado Data Science Team](http://codata.colorado.edu).
+* I was a founding member and captain of the [Colorado Data Science Team](http://codata.colorado.edu).
 * I am a certified avalanche instructor for the [National Ski Patrol](http://nsp.org/), 
 * Professional member of the [American Avalanche Association](https://www.americanavalancheassociation.org/).
 
@@ -51,4 +51,4 @@ Note that we did not play against high school students, the opposing team were c
 ### Avalanche Education
 
 As a bilingual avalanche safety instructor, I have taught hundreds of students throughout Idaho, Oregon, California, Colorado, Argentina, and Chile how to safely enjoy backcountry skiing and riding.
-In my [blog](https://www.pedro.ai/blog) I've posted several of my lectures and written on [snowgeek.org](https://snowgeek.org) as well.
+In my [blog](https://www.pedro.ai/blog) I've posted several of my lectures and written on [snowgeek.org](https://snowgeek.org) as well. Fun fact: I got my nickname "Pinguino" while teaching in Argentina (e.g., the favicon for my site is a penguin).
