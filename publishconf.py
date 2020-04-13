@@ -21,4 +21,4 @@ DEBUG_MODE = False
 
 # Following items are often useful when publishing
 
-GOOGLE_ANALYTICS = "UA-38529872-3"
+GOOGLE_UA = "UA-163339165-1"
