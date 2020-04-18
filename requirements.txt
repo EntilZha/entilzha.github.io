@@ -1,10 +1,8 @@
 pelican==4.1.0
 Pygments==2.4.2
-ghp-import==0.5.5
 typogrify==2.0.7
 Markdown==3.1.1
 webassets==0.12.1
 cssmin==0.2.0
 bibtexparser==1.1.0
-ipython==7.6.1
 nbconvert==5.5.0

@@ -39,7 +39,7 @@
         </script>
         {% endif %}
     </head>
-  <body {% block bodyclass %}{% endblock %}>
+  <body {% block bodyclass %}{% endblock %} style="min-width:475px">
     <div class="page-container">
         <div class="small-16 medium-16 large-16 columns head-area bgimage" style="background-image: url({{ SITEURL }}/theme/images/side-background.jpg)">
             {% include "partials/header.html" %}
@@ -47,7 +47,7 @@
         {% assets filters="uglifyjs", output="js/react-combined.js", "js/react.production.min.js", "js/react-dom.production.min.js" %}
         <script src="{{ SITEURL  }}/{{ ASSET_URL }}"></script>
         {% endassets %}
-        <div class="small-16 medium-16 large-16 columns main-column">
+        <div class="small-16 medium-16 large-16 main-column">
             <main class="content" role="main">
                 {% block content %}
                 {% endblock %}

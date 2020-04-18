@@ -2120,6 +2120,7 @@ meta.foundation-mq-topbar {
   float: none;
 }
 
+
 ul.pagination {
   display: block;
   height: 1.5rem;
@@ -4726,6 +4727,11 @@ a:hover {
   .overlay ul li {
     min-height: 34px;
   };
+}
+
+.main-column {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .main-column main {

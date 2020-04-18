@@ -5,15 +5,19 @@
 {% block bodyclass %} class="post-template" {% endblock %}
 
 {% block content %}
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start;">
-    <article class="post tag-bonnes-pratiques tag-tah" style="width:65%">
-        <h1 class="post-title">{{ page.title }}</h1>
-        <section class="post-content {{ page.link_target }}">{{ page.content }}</content>
-        <hr>
-    </article>
-    <article style="width:34%; margin-left:10px" class="float-box">
-        <h2>News</h2>
-        {{ '' | news }}
-    </article>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start;flex-direction: row-reverse;">
+    <div class="small-16 large-5 medium-16" style="margin-bottom:18px">
+        <article class="float-box" style="width:95%;margin:0 auto;">
+            <h2>News</h2>
+            {{ '' | news }}
+        </article>
+    </div>
+    <div class="small-16 large-11 medium-16">
+        <article class="post tag-bonnes-pratiques tag-tah" style="width:95%;margin: 0 auto;">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <section class="post-content {{ page.link_target }}">{{ page.content }}</section>
+            <hr>
+        </article>
+    </div>
 </div>
 {% endblock %}
