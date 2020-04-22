@@ -22,7 +22,7 @@ If the job you have doesn't match then feel free to contact me, but don't expect
 
 ### Geographic Location
 
-* I strongly prioritize geographic locations where I can the outdoor activities I love: skiing, rock climbing, and hiking.
+* I strongly prioritize geographic locations where I can enjoy the outdoor activities I love: skiing, rock climbing, and hiking.
 * Thus, ideally the role should be in the pacific northwest, west coast, or rocky mountain regions of the United States (e.g., Seattle, Bay Area, Denver etc.).
 * Something should be *truly exceptional* about the job for me to move somewhere where enjoying my outdoors interests is difficult (e.g., NYC or DC).
 * I *might* entertain international positions depending on details. For example, I've lived in Zurich, Switzerland and loved my time there; I'd strongly consider opportunities in places like that.
