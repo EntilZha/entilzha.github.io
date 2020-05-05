@@ -11,6 +11,7 @@ def news(_):
     import markdown
     html = markdown.markdown(
 """
+* [arXiv Preprint from FB Internship](https://arxiv.org/abs/1904.04792)
 * [Blog post on AllenNLP Callbacks and CometML](https://www.pedro.ai/blog/2020/04/08/allennlp-callback-trainer-cometml/)
 * [Blog post on Reproducible ML](/blog/2020/03/24/reproducible-ml-and-parameter-sweeps/)
 * [Blog post on Debugging ML Code](/blog/2019/12/15/debug-ml-code/)
