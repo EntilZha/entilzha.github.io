@@ -11,6 +11,13 @@ Here are a bunch of software/tips/resources I've found. I like to have them in a
 * [Pandas Cheatsheet](static/pdf/pandas-cheat-sheet.pdf) from [https://pandas.pydata.org/](https://pandas.pydata.org/
 )
 
+## Notebooks
+
+Here are notebooks I've created with useful code snippets
+
+* [Plotnine: Bar Plot with Arrows](https://colab.research.google.com/drive/1JrTGUftkNVK2RoZyHtAqoIbPPQGxaSj9?usp=sharing)
+* [Plotnine: Category Ordering](https://colab.research.google.com/drive/1DBSclyy0USbi4SyANCFAL9ZzWKIyvqwO?usp=sharing)
+
 ## Software
 
 ### Paper Writing
