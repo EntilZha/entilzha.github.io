@@ -107,6 +107,7 @@ Here are a bunch of software/tips/resources I've found. I like to have them in a
 ### Links
 * [CLIP Homepage](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page)
 * [CLIP Wiki](https://wiki.umiacs.umd.edu/clip/clipwiki/index.php)
+* [UMD Themed Google Slides](https://docs.google.com/presentation/d/11bx0NTp_RpDTiLhj7u-kxJPT-LQGB0zhbvekslYUwns/edit?usp=sharing), I created these based on graphics in a UMD Powerpoint theme. To use, make a new presentation and import the theme from this sample slide deck
 
 ### Where can I store files at UMD?
 

@@ -33,9 +33,11 @@ During my undergraduate degree, I was a research assistant in [UC Berkeley's AMP
 
 ## Service and Certifications
 
-* ACL 2019 Assistant Reviewer
-* I was a founding member and captain of the [Colorado Data Science Team](http://codata.colorado.edu).
-* I am a certified avalanche instructor for the [National Ski Patrol](http://nsp.org/), 
+* ACL 2019 Secondary Reviewer
+* EMNLP 2020 Secondary Reviewer
+* [Planned] ACL 2021 Sub-committee Co-Chair for Diversity and Inclusion
+* Founding member and former captain of the [Colorado Data Science Team](http://codata.colorado.edu).
+* Certified avalanche instructor for the [National Ski Patrol](http://nsp.org/), 
 * Professional member of the [American Avalanche Association](https://www.americanavalancheassociation.org/).
 
 
