@@ -1,5 +1,5 @@
 Title: Literature Review Tricks
-Date: 2020-8-22
+Date: 2020-8-25
 Tags: research,writing
 Slug: literature-review-tricks
 Author: Pedro Rodriguez
