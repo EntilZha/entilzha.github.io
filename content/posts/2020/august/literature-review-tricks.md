@@ -9,7 +9,7 @@ Conducting a thorough literature review for a new idea is a critical yet difficu
 Even now, for areas I'd like to think I have a good grasp on, its difficult not to miss something important; multiple times, I've done a literature review only to find a couple weeks later I missed a paper or two.
 In this post, I will share some of the tricks I've learned for making literature reviews easier.
 
-I've found the most helpful tricks are (1) using scholar tools like [Semantic Scholar](https://www.semanticscholar.org/), (2) following authors who frequently publish papers relevant to your area of interest, (3) exposing yourself to social groups that share papers, (4) knowing how to ask for help, and (5) using a system for managing papers/references.
+I've found the most helpful tricks are (1) using scholar tools like [Semantic Scholar](https://www.semanticscholar.org/), (2) setting up custom search engines, (3) following authors who frequently publish papers relevant to your area of interest, (4) exposing yourself to social groups that share papers, (5) knowing how to ask for help, and (6) using a system for managing papers/references.
 These combined will passively and actively increase the quality of literature reviews while making them more easier to do.
 
 I view literature review as an iterative queue-building and writing process that bounces between depth first search, breadth first search, and writing.
@@ -38,6 +38,32 @@ This trick is especially helpful for searches intents like:
 This trick is extremely effective if there is a specific paper that you believe all/most papers in your literature review would cite.
 For example, if I am doing a literature review of [SQuAD models](https://rajpurkar.github.io/SQuAD-explorer/) then I can be fairly sure that any relevant papers will cite the SQuAD paper.
 The main drawback of this approach---as is apparent for SQuAD or ImageNet---is that this list of papers might be huge; such is life though.
+
+## Custom Search Engines
+
+Most browsers support defining custom search engines and many conference specific search engines are compatible with these.
+For example, if I am looking for a paper that I know is in the [ACL Anthology](https://www.aclweb.org/anthology/), I have my browser configured so that I:
+
+1. Type `acl test`
+2. The browser goes to [https://www.aclweb.org/anthology/search/?q=test](https://www.aclweb.org/anthology/search/?q=test)
+3. I have similar shortcuts for arXiv, ICLR, and Semantic Scholar
+
+Its relatively easy to find instructions to do this via Google for any browser, but here are the steps for Chrome:
+
+1. Go to Settings
+2. Go to Search engine
+3. Go to Manage search engines
+4. Click "Add" and for the ACL Anthology type this: https://www.aclweb.org/anthology/search/?q=%s
+5. You can repeat this for any search engine by searching for something on their webpage and replacing the search term with %s
+
+Here are the URLs for the aforementioned sits:
+
+* ACL Anthology: https://www.aclweb.org/anthology/search/?q=%s
+* Semantic Scholar: https://www.semanticscholar.org/search?q=%s&sort=relevance
+* ICLR: https://openreview.net/search?term=%s&content=all&group=all&source=all
+* arXiv: https://arxiv.org/search/?query=%s&searchtype=all&abstracts=show&order=-announced_date_first&size=50
+
+Small self-plug, I wrote a small (undocumented) custom search redirector that does this for me at https://github.com/EntilZha/archie.
 
 ## Following Authors and Social Groups
 
