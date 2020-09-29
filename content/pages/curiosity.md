@@ -3,8 +3,6 @@ Slug: curiosity
 Authors: Pedro Rodriguez
 Description: Webpage for my EMNLP 2020 paper on conversational curiosity
 
-# Information Seeking in the Spirit of Learning: a dataset for Conversational Curiosity
-
 Welcome to our website that accompanies our EMNLP 2020 paper: "Information Seeking in the Spirit of Learning: a dataset for Conversational Curiosity"
 
 ## Citation
