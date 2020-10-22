@@ -14,7 +14,7 @@ In my free time, I am an avid skier, climber, and hiker.
 
 Contact me through <a target="_blank" href="https://mailhide.io/e/wbfjM">email</a>. Recruiters, please [read this page](/recruiting) before contacting me.
 
-<a class="button small common-button" style="width:200px;" href="{filename}/resume.pdf" target="_blank">Download Resume</a>
+<a class="button small common-button" style="width:200px;" href="{static}/resume.pdf" target="_blank">Download Resume</a>
 
 
 ## Industry Experience

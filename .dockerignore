@@ -1,1 +1,3 @@
-output
+output/
+.git/
+node_modules

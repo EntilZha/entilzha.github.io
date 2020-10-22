@@ -6,3 +6,4 @@ webassets==0.12.1
 cssmin==0.2.0
 bibtexparser==1.1.0
 nbconvert==5.5.0
+ipython

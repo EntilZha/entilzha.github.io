@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  pelican:
+    build: .
+    volumes:
+        - ./:/entilzha.github.io
+        - output-pelican:/entilzha.github.io/output
+    command: pelican -o output content
+  http:
+    image: python:3.8
+    command: python -m http.server --directory /entilzha.github.io/output 8000
+    ports:
+        - 8000:8000
+    volumes:
+        - output-pelican:/entilzha.github.io/output
+volumes:
+  output-pelican:
