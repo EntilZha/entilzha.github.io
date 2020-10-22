@@ -5,10 +5,10 @@ Description: EMNLP 2020 Paper on Conversational Curiosity
 
 ![Curiosity dialog diagram](/static/images/curiosity-dialog.png){align=right}
 
-Welcome to our website for our EMNLP 2020 paper: [Information Seeking in the Spirit of Learning: a dataset for Conversational Curiosity](/static/publications/2020_emnlp_curiosity.paper.pdf).
+Welcome to the project page for our EMNLP 2020 paper: [Information Seeking in the Spirit of Learning: a Dataset for Conversational Curiosity](/static/publications/2020_emnlp_curiosity.paper.pdf).
 Our paper introduces the Curiosity dataset which consists of 14K dialogs with fine-grained knowledge groundings, dialog act annotations, and other auxiliary annotations.
 
-You can browse and browse the curiosity dataset at [datasets.pedro.ai/dataset/curiosity](https://datasets.pedro.ai/dataset/curiosity).
+You can browse and explore the curiosity dataset at [datasets.pedro.ai/dataset/curiosity](https://datasets.pedro.ai/dataset/curiosity).
 
 
 ## Abstract
