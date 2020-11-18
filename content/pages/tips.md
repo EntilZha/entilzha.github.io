@@ -123,3 +123,8 @@ For example, moving a file `/fs/clip-quiz/code/old-big-project/` could be done u
 ### What is `~`? Non-breaking space in latex?
 * LaTeX will not break lines between alpha and beta in `alpha~beta`
 
+## Research
+
+### How should I advertise my work on Twitter?
+* [Guide by Ryan Gallagher](https://twitter.com/ryanjgallag/status/1316409309694169088)
+
