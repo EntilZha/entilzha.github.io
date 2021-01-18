@@ -31,12 +31,16 @@ I earned my Bachelor's Degree in Computer Science from the [University of Califo
 During my undergraduate degree, I was a research assistant in [UC Berkeley's AMPLab](https://amplab.cs.berkeley.edu/), [UC Berkeley's Astronomy Department](https://sites.google.com/site/cftdinfo/), and [Boise State University's Cryosphere Group](https://earth.boisestate.edu/cryogars/).
 
 
-## Service and Certifications
+## Service
 
-* ACL 2019 Secondary Reviewer
+* ACL 2021 Sub-committee Co-Chair for Diversity and Inclusion
+* NAACL 2021 Reviewer
 * EMNLP 2020 Secondary Reviewer
-* [Planned] ACL 2021 Sub-committee Co-Chair for Diversity and Inclusion
+* ACL 2019 Secondary Reviewer
 * Founding member and former captain of the [Colorado Data Science Team](http://codata.colorado.edu).
+
+## Certifications and Professional Organizations
+
 * Certified avalanche instructor for the [National Ski Patrol](http://nsp.org/), 
 * Professional member of the [American Avalanche Association](https://www.americanavalancheassociation.org/).
 
