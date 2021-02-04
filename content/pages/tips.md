@@ -11,17 +11,19 @@ Here are a bunch of software/tips/resources I've found. I like to have them in a
 * [Pandas Cheatsheet](static/pdf/pandas-cheat-sheet.pdf) from [https://pandas.pydata.org/](https://pandas.pydata.org/
 )
 
-## How do you do X in Plotnine?
-
-* [Plotnine: Bar Plot with Arrows](https://colab.research.google.com/drive/1JrTGUftkNVK2RoZyHtAqoIbPPQGxaSj9?usp=sharing)
-* [Plotnine: Category Ordering](https://colab.research.google.com/drive/1DBSclyy0USbi4SyANCFAL9ZzWKIyvqwO?usp=sharing)
 
 ## Software
 
 ### What software is useful for writing research papers?
 * [Paperpile for organizing research papers](https://paperpile.com/)
+* [Altair for figures](https://altair-viz.github.io)
 * [Plotnine for figures](https://plotnine.readthedocs.io)
 * [draw.io for diagrams](https://draw.io)
+
+### How do you do X in Plotnine?
+
+* [Plotnine: Bar Plot with Arrows](https://colab.research.google.com/drive/1JrTGUftkNVK2RoZyHtAqoIbPPQGxaSj9?usp=sharing)
+* [Plotnine: Category Ordering](https://colab.research.google.com/drive/1DBSclyy0USbi4SyANCFAL9ZzWKIyvqwO?usp=sharing)
 
 ### Operating Systems
 * I use [Arch Linux](https://www.archlinux.org/) on machines I own.
@@ -56,6 +58,8 @@ Here are a bunch of software/tips/resources I've found. I like to have them in a
 ### What is some software for data analytics/distributed computing?
 * [Apache Spark: SQL-based analytics and distributed computing](https://spark.apache.org/)
 * [Dask: pure python distributed computing](https://dask.org/)
+* In general Slurm is very good
+* For Slurm, [submitit](https://github.com/facebookincubator/submitit) is a useful tool
 
 ### What are good python libraries for creating websites?
 
@@ -90,7 +94,8 @@ Here are a bunch of software/tips/resources I've found. I like to have them in a
 * `allennlp` sets [random seeds](https://github.com/allenai/allennlp/blob/v0.9.0/allennlp/common/util.py#L177) deterministically which helps improve reproducibility of experiments. Occasionally, when doing things like running multiple trials of identical hyper parameters, this behavior causes results for each trial to be identical. In these cases, its helpful to manually specify a random seed; for example using the trial number as the random seed.
 
 ## Tips from Others
-* [Style guide from my advisor](http://users.umiacs.umd.edu/~jbg/static/style.html)
+* [Style guide from my advisor (Jordan Boyd-Graber)](http://users.umiacs.umd.edu/~jbg/static/style.html)
+* [Writing Tips from Jimmy Lin](https://github.com/lintool/guide/blob/master/writing-pet-peeves.md#polish)
 
 ## Docs
 
