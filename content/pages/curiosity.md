@@ -26,12 +26,6 @@ If you cite our paper, please use this citation:
 
 ```bib
 @inproceedings{rodriguez2020curiosity,
-    title = {Information Seeking in the Spirit of Learning: a Dataset for Conversational Curiosity},
-    author = {Pedro Rodriguez and Paul Crook and Seungwhan Moon and Zhiguang Wang},
-    year = 2020,
-    booktitle = {Empirical Methods in Natural Language Processing}
-}
-@inproceedings{rodriguez2020curiosity,
     title = "Information Seeking in the Spirit of Learning: A Dataset for Conversational Curiosity",
     author = "Rodriguez, Pedro  and
       Crook, Paul  and
