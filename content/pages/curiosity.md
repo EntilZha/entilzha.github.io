@@ -31,6 +31,21 @@ If you cite our paper, please use this citation:
     year = 2020,
     booktitle = {Empirical Methods in Natural Language Processing}
 }
+@inproceedings{rodriguez2020curiosity,
+    title = "Information Seeking in the Spirit of Learning: A Dataset for Conversational Curiosity",
+    author = "Rodriguez, Pedro  and
+      Crook, Paul  and
+      Moon, Seungwhan  and
+      Wang, Zhiguang",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.655",
+    doi = "10.18653/v1/2020.emnlp-main.655",
+    pages = "8153--8172",
+}
 ```
 
 ## Data
