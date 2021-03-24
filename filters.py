@@ -11,7 +11,8 @@ def news(_):
     import markdown
     html = markdown.markdown(
 """
-* [arXiv Preprint from FB Internship](https://arxiv.org/abs/1904.04792)
+* Defending PhD Thesis on "Evaluating Machine Intelligence with Question Answering" on April 9th
+* [EMNLP 2020 Paper from FB Internship](https://www.aclweb.org/anthology/2020.emnlp-main.655/)
 * [Blog post on AllenNLP Callbacks and CometML](https://www.pedro.ai/blog/2020/04/08/allennlp-callback-trainer-cometml/)
 * [Blog post on Reproducible ML](/blog/2020/03/24/reproducible-ml-and-parameter-sweeps/)
 * [Blog post on Debugging ML Code](/blog/2019/12/15/debug-ml-code/)
