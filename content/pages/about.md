@@ -1,4 +1,4 @@
-Title: Pedro Rodriguez | pedro.ai
+Title: Pedro Rodriguez
 Slug: home
 Authors: Pedro Rodriguez
 Description: About Pedro Rodriguez
