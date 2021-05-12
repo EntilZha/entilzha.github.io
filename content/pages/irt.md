@@ -3,7 +3,7 @@ Slug: leaderboard-acl2021
 Authors: Pedro Rodriguez
 Description: ACL 2021 Paper on Item Response Theory for NLP Leaderboards
 
-![Item Response Theory Leaderboarod Diagram](/static/images/curiosity-dialog.png){align=right}
+![Item Response Theory Leaderboard Diagram](/static/images/leaderboard-irt.png){align=right}
 
 Welcome to the project page for our ACL 2021 paper: [Evaluation Examples Are Not Equally Informative: How Should That Change NLP Leaderboards?]().
 
