@@ -70,4 +70,4 @@ Instructions to reproduce our results are in each respective repository.
 
 ## Contact
 
-Please contact <a target="_blank" href="https://mailhide.io/e/wbfjM">Pedro Rodriguez</a>
+Please contact <a target="_blank" href="mailto:me@pedro.ai">Pedro Rodriguez at me@pedro.ai</a>

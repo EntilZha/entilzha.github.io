@@ -15,7 +15,7 @@ Thematically, I am interested in question answering, conversational information-
 
 In my free time, I am an avid skier, climber, and hiker. 
 
-Contact me through <a target="_blank" href="https://mailhide.io/e/wbfjM">email</a>. Recruiters, please [read this page](/recruiting) before contacting me.
+Contact me at <a target="_blank" href="mailto:me@pedro.ai">me@pedro.ai</a>. Recruiters, please [read this page](/recruiting) before contacting me.
 
 <a class="button small common-button" style="width:200px;" href="{static}/resume.pdf" target="_blank">Download Resume</a>
 
@@ -47,7 +47,7 @@ During my undergraduate degree, I was a research assistant in [UC Berkeley's AMP
 
 ## Certifications and Professional Organizations
 
-* Certified avalanche instructor for the [National Ski Patrol](http://nsp.org/), 
+* Certified avalanche instructor for the [National Ski Patrol](http://nsp.org/)
 * Professional member of the [American Avalanche Association](https://www.americanavalancheassociation.org/).
 
 ## Avalanche Education
