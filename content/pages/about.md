@@ -5,7 +5,7 @@ Description: About Pedro Rodriguez
 Template: main_page
 save_as: index.html
 
-I am an NLP research scientist at Facebook Reality Labs in Seattle.
+I am an NLP research scientist at [Facebook Reality Labs in Seattle](https://research.fb.com/people/rodriguez-pedro/).
 I recently defended my PhD in Computer Science at the [University of Maryland at College Park](http://www.cs.umd.edu/) titled "Evaluating Machine Intelligence with Question Answering".
 I worked in the [Computational Linguistics and Information Processing (CLIP) Lab](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page) with [Jordan Boyd-Graber](http://www.umiacs.umd.edu/~jbg/).
 
