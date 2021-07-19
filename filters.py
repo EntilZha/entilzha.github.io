@@ -11,7 +11,7 @@ def news(_):
     import markdown
     html = markdown.markdown(
 """
-* August 3:[Presenting ACL 2021 Paper on Item Response Theory for NLP Leaderboards](https://irt.pedro.ai)
+* August 3: [Presenting ACL 2021 Paper on Item Response Theory for NLP Leaderboards](https://irt.pedro.ai)
 * April 19: [Started as a Research Scientist at Facebook Reality Labs](https://research.fb.com/people/rodriguez-pedro/)
 * April 9: Defended PhD Thesis on "Evaluating Machine Intelligence with Question Answering"
 * [EMNLP 2020 Paper from FB Internship](https://www.aclweb.org/anthology/2020.emnlp-main.655/)
