@@ -11,8 +11,9 @@ def news(_):
     import markdown
     html = markdown.markdown(
 """
-* [ACL 2021 Acceptance for Paper on Item Response Theory for NLP Leaderboards](https://twitter.com/EntilZhaPR/status/1390329941447778304)
-* Defended PhD Thesis on "Evaluating Machine Intelligence with Question Answering" on April 9th
+* August 3:[Presenting ACL 2021 Paper on Item Response Theory for NLP Leaderboards](https://irt.pedro.ai)
+* April 19: [Started as a Research Scientist at Facebook Reality Labs](https://research.fb.com/people/rodriguez-pedro/)
+* April 9: Defended PhD Thesis on "Evaluating Machine Intelligence with Question Answering"
 * [EMNLP 2020 Paper from FB Internship](https://www.aclweb.org/anthology/2020.emnlp-main.655/)
 * [Blog post on AllenNLP Callbacks and CometML](https://www.pedro.ai/blog/2020/04/08/allennlp-callback-trainer-cometml/)
 * [Blog post on Reproducible ML](/blog/2020/03/24/reproducible-ml-and-parameter-sweeps/)
