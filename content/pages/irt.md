@@ -37,9 +37,9 @@ Instructions to reproduce our results are in each respective repository.
 
 ## Data
 
-* Full data (decompressed 20-25GB): https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-all.tar.gz
-* Data minus linear models (decompressed 6GB): https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-minus-linear.tar.gz
-* Only IRT model and data (decompressed 1GB): wget https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-only-irt.tar.gz
+* Full data (decompressed 20-25GB): [https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-all.tar.gz](https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-all.tar.gz)
+* Data minus linear models (decompressed 6GB): [https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-minus-linear.tar.gz](https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-minus-linear.tar.gz)
+* Only IRT model and data (decompressed 1GB): [https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-only-irt.tar.gz](https://obj.umiacs.umd.edu/acl2021-leaderboard/leaderboard-data-only-irt.tar.gz)
 
 ## Contact
 
