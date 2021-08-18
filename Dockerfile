@@ -4,7 +4,7 @@ RUN apt update
 RUN apt install -y git
 RUN apt install -y nodejs npm
 RUN npm install -g uglify-js
-RUN npm install -g babel-cli@6 babel-preset-react-app@3
+RUN npm install -g babel-cli@6 babel-preset-react-app
 ENV PYTHONPATH "${PYTHONPATH}:/pelican-plugins"
 RUN git clone https://github.com/getpelican/pelican-plugins.git /pelican-plugins
 WORKDIR /pelican-plugins

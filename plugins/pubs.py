@@ -1,14 +1,25 @@
-import json
 import datetime
+import copy
 from pelican import signals
 from pelican.readers import BaseReader
 from plugins.react import compile_jsx
+import bibtexparser
+from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bparser import BibTexParser
-from jinja2 import Template, Environment
+from bibtexparser.bibdatabase import BibDatabase
+from jinja2 import Environment
 
 
 template = """
-<h2>Refereed</h2>
+<h3>PhD Thesis</h3>
+<ul>
+{% for e in thesis %}
+<li>
+<div>{{ e.authors }}. <b><a href="{{ e.url }}">{{ e.title }}</a></b>. <i>{{ e.source }}</i>, {{ e.year }}. <span class="bibtex" data-entry="{{ e.cite }}"></span></div>
+</li>
+{% endfor %}
+</ul>
+<h3>Refereed</h3>
 <ul>
 {% for e in publications %}
 <li>
@@ -16,7 +27,7 @@ template = """
 </li>
 {% endfor %}
 </ul>
-<h2>arXiv</h2>
+<h3>arXiv</h3>
 <ul>
 {% for e in arxiv %}
 <li>
@@ -24,7 +35,7 @@ template = """
 </li>
 {% endfor %}
 </ul>
-<h2>Workshops</h2>
+<h3>Workshops</h3>
 <ul>
 {% for e in workshops %}
 <li>
@@ -32,7 +43,7 @@ template = """
 </li>
 {% endfor %}
 </ul>
-<h2>Non-Refereed</h2>
+<h3>Non-Refereed</h3>
 <ul>
 {% for e in non_refereed %}
 <li>
@@ -40,7 +51,7 @@ template = """
 </li>
 {% endfor %}
 </ul>
-<h2>Media</h2>
+<h3>Media</h3>
 <ul>
 {% for e in media %}
 <li>
@@ -48,7 +59,7 @@ template = """
 </li>
 {% endfor %}
 </ul>
-<h2>Course Projects</h2>
+<h3>Course Projects</h3>
 <ul>
 {% for e in projects %}
 <li>
@@ -77,6 +88,17 @@ def comma_join(authors):
         return ', '.join(authors[:-1]) + ", and " + authors[-1]
 
 
+
+def extract_citation(entry):
+    entry = copy.deepcopy(entry)
+    del entry['type']
+    single_entry_db = BibDatabase()
+    single_entry_db.entries = [entry]
+    writer = BibTexWriter()
+    return bibtexparser.dumps(single_entry_db, writer).strip()
+
+
+
 class PublicationsReader(BaseReader):
     enabled = True
     file_extensions = ['bib']
@@ -95,15 +117,28 @@ class PublicationsReader(BaseReader):
             parser.ignore_nonstandard_types = False
             db = parser.parse_file(f)
             entries = [self._parse_entry(e) for e in db.entries]
+
+            thesis = []
+            publications = []
+            arxiv = []
+            workshops = []
+            non_refereed = []
+            media = []
+            projects = []
+            
+            thesis = [e for e in entries if e['type'] == 'thesis']
             publications = [e for e in entries if e['type'] == 'publication']
             arxiv = [e for e in entries if e['type'] == 'arxiv']
             workshops = [e for e in entries if e['type'] == 'workshop']
             non_refereed = [e for e in entries if e['type'] == 'non-refereed']
             media = [e for e in entries if e['type'] == 'media']
             projects = [e for e in entries if e['type'] == 'project']
+            for e in entries:
+                del e['type']
             jinja_env = Environment()
             jinja_env.filters['compile_jsx'] = compile_jsx
             html = jinja_env.from_string(template).render(
+                thesis=thesis,
                 publications=publications,
                 media=media,
                 arxiv=arxiv,
@@ -114,15 +149,16 @@ class PublicationsReader(BaseReader):
         return html, parsed
 
     def _parse_entry(self, entry):
-        authors = [author_format(e) for e in entry['author'].split('and')]
-        is_journal = False
+        authors = [author_format(e) for e in entry['author'].split(' and ')]
         if 'booktitle' in entry:
             source = entry['booktitle']
             volume = ''
         elif 'journal' in entry:
-            is_journal = entry['ENTRYTYPE'] == 'article'
             source = entry['journal']
             volume = entry.get('volume', '')
+        elif 'school' in entry:
+            source = entry['school']
+            volume = ''
         else:
             source = ''
             volume = ''
@@ -130,83 +166,16 @@ class PublicationsReader(BaseReader):
             'authors': comma_join(authors),
             'bib_authors': entry['author'],
             'url': entry['url'],
-            'title': entry['title'],
+            'title': entry['title'].replace('{', '').replace('}', ''),
             'year': entry['year'],
             'source': source,
             'volume': volume,
             'type': entry['type'],
             'id': '@' + entry['ID']
         }
-        cite = self._entry_to_bibtex(parsed_entry, is_journal)
+        cite = extract_citation(entry)
         parsed_entry['cite'] = cite
         return parsed_entry
-
-    def _entry_to_bibtex(self, entry, is_journal):
-        bibtex_key = entry['id']
-        if bibtex_key.startswith('@'):
-            bibtex_key = bibtex_key[1:]
-        if is_journal:
-            if entry['type'] == 'arxiv':
-                return arxiv_template.format(
-                    bibtex_key=bibtex_key,
-                    title=entry['title'],
-                    author=entry['bib_authors'],
-                    journal=entry['source'],
-                    year=entry['year'],
-                    url=entry['url']
-                )
-            else:
-                return journal_template.format(
-                    bibtex_key=bibtex_key,
-                    title=entry['title'],
-                    author=entry['bib_authors'],
-                    journal=entry['source'],
-                    year=entry['year'],
-                    volume=entry['volume'],
-                    url=entry['url']
-                )
-        else:
-            return booktitle_template.format(
-                bibtex_key=bibtex_key,
-                title=entry['title'],
-                author=entry['bib_authors'],
-                booktitle=entry['source'],
-                year=entry['year'],
-                url=entry['url']
-            )
-
-
-
-journal_template = """@article{{{bibtex_key},
-    Title = {{{title}}},
-    Author = {{{author}}},
-    Journal = {{{journal}}},
-    Year = {{{year}}},
-    Volume = {{{volume}}},
-    Url = {{{url}}},
-}}"""
-
-arxiv_template = """@article{{{bibtex_key},
-    Title = {{{title}}},
-    Author = {{{author}}},
-    Year = {{{year}}},
-    Url = {{{url}}},
-}}"""
-
-booktitle_template = """@inproceedings{{{bibtex_key},
-    Title = {{{title}}},
-    Author = {{{author}}},
-    Booktitle = {{{booktitle}}},
-    Year = {{{year}}},
-    Url = {{{url}}},
-}}"""
-
-online_template = """@online{{{bibtex_key},
-    Title = {{{title}}},
-    Author = {{{author}}},
-    Year = {{{year}}},
-    Url = {{{url}}},
-}}"""
 
 def add_reader(readers):
     readers.reader_classes['pubs'] = PublicationsReader
