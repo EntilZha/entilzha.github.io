@@ -15,9 +15,6 @@ def news(_):
 * August 3: [Presenting ACL 2021 Paper on Item Response Theory for NLP Leaderboards](https://irt.pedro.ai)
 * April 19: [Started as a Research Scientist at Facebook Reality Labs](https://research.fb.com/people/rodriguez-pedro/)
 * April 9: Defended PhD Thesis on [Evaluating Machine Intelligence with Question Answering](https://www.pedro.ai/static/publications/pedro_rodriguez_phd_thesis.pdf)
-* [EMNLP 2020 Paper from FB Internship](https://www.aclweb.org/anthology/2020.emnlp-main.655/)
-* [arXiv Preprint for Quizbowl](https://arxiv.org/abs/1904.04792)
-* [TACL Paper](https://www.pedro.ai/static/publications/2019_tacl_trick.pdf) on Adversarial Question Generation
 
 ## Posts
 * [Blog post on AllenNLP Callbacks and CometML](https://www.pedro.ai/blog/2020/04/08/allennlp-callback-trainer-cometml/)

@@ -6,18 +6,21 @@ Template: main_page
 save_as: index.html
 
 I am an NLP research scientist at [Facebook Reality Labs in Seattle](https://research.fb.com/people/rodriguez-pedro/).
-I recently defended my PhD in Computer Science at the [University of Maryland at College Park](http://www.cs.umd.edu/) titled "Evaluating Machine Intelligence with Question Answering".
+I recently defended my PhD in Computer Science at the [University of Maryland at College Park](http://www.cs.umd.edu/) titled ["Evaluating Machine Intelligence with Question Answering"](https://www.pedro.ai/static/publications/pedro_rodriguez_phd_thesis.pdf).
 I worked in the [Computational Linguistics and Information Processing (CLIP) Lab](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page) with [Jordan Boyd-Graber](http://www.umiacs.umd.edu/~jbg/).
 
-Methodologically, my research focuses on improving methodologies in dataset construction and evaluation.
+Methodologically, my research focuses on improving methods for dataset construction and evaluation.
 I am especially interested in re-imagining leaderboards and NLP benchmarks so that they better support long-term research.
 Thematically, I am interested in question answering, conversational information-seeking, and adjacent areas.
 
 In my free time, I am an avid skier, climber, and hiker. 
 
+<a class="button small common-button" style="width:200px;" href="{static}/resume.pdf" target="_blank">Download Resume</a>
+
+### Contact
+
 Contact me at <a target="_blank" href="mailto:me@pedro.ai">me@pedro.ai</a>. Recruiters, please [read this page](/recruiting) before contacting me.
 
-<a class="button small common-button" style="width:200px;" href="{static}/resume.pdf" target="_blank">Download Resume</a>
 
 
 ## Industry Experience
@@ -47,6 +50,7 @@ During my undergraduate degree, I was a research assistant in [UC Berkeley's AMP
 
 ## Certifications and Professional Organizations
 
+* Member of Association for Computational Linguistics
 * Certified avalanche instructor for the [National Ski Patrol](http://nsp.org/)
 * Professional member of the [American Avalanche Association](https://www.americanavalancheassociation.org/).
 
