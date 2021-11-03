@@ -23,6 +23,8 @@ If you cite our paper, please use this citation:
     author = "Pedro Rodriguez and Joe Barrow and Alexander Hoyle and John P. Lalor and Robin Jia and Jordan Boyd-Graber",
     booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics",
     year = "2021",
+    url = "https://aclanthology.org/2021.acl-long.346",
+    doi = "10.18653/v1/2021.acl-long.346",
     publisher = "Association for Computational Linguistics"
 }
 ```
