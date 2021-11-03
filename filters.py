@@ -12,6 +12,7 @@ def news(_):
     html = markdown.markdown(
 """
 ## News
+* November 3: [Presenting EMNLP 2021 Paper on Evaluation Paradigms in Question Answering](https://www.pedro.ai/paradigms-emnlp2021)
 * August 3: [Presenting ACL 2021 Paper on Item Response Theory for NLP Leaderboards](https://irt.pedro.ai)
 * April 19: [Started as a Research Scientist at Facebook Reality Labs](https://research.fb.com/people/rodriguez-pedro/)
 * April 9: Defended PhD Thesis on [Evaluating Machine Intelligence with Question Answering](https://www.pedro.ai/static/publications/pedro_rodriguez_phd_thesis.pdf)
