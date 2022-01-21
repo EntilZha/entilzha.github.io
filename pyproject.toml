@@ -15,7 +15,7 @@ cssmin = "0.2.0"
 bibtexparser = "^1.1"
 nbconvert = "^5.5"
 rich = "^10.7.0"
-ipython = "^7.13.0"
+ipython = "^7.31.1"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
