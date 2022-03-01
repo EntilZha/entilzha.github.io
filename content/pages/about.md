@@ -15,7 +15,7 @@ Thematically, I am interested in question answering, conversational information-
 
 In my free time, I am an avid skier, climber, hiker, and violinist. 
 
-<a class="button small common-button" style="width:200px;" href="{static}/resume.pdf" target="_blank">Download Resume</a>
+<a class="button small common-button" style="width:200px;" href="{static}/cv.pdf" target="_blank">Download CV</a>
 
 ### Contact
 
@@ -40,6 +40,8 @@ During my undergraduate degree, I was a research assistant in [UC Berkeley's AMP
 
 ## Service
 
+* Organizer for the [Dynamic Adversarial Data Collection (DADC) Workshop](https://dadcworkshop.github.io/) at NAACL 2022
+* ARR 2022 Reviewer
 * ARR 2021 Reviewer
 * EMNLP 2021 Program Committee (Reviewer)
 * ACL 2021 Sub-committee Co-Chair for Diversity and Inclusion
