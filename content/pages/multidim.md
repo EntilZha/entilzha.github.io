@@ -1,5 +1,5 @@
 Title: Clustering Examples in Multi-Task NLP Benchmarks with Item Response Theory
-Slug: multidim-2022
+Slug: multidim-irt
 Authors: Pedro Rodriguez
 Description: ACL 2022 Workshop paper on clustering examples in multi-task NLP benchmarks
 
