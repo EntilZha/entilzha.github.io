@@ -52,6 +52,7 @@ PAGE_SAVE_AS = '{slug}/index.html'
 STATIC_PATHS = [
     'robots.txt',
     'favicon.ico',
+    'cv.pdf',
     'resume.pdf',
     'CNAME',
     'static',

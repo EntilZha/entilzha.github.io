@@ -14,7 +14,7 @@ I didn't like the first because it costs money to host (I am now a "poor" grad s
 savings here and there is *very nice*). Second, I didn't want to invest the time to learn Ghost's templating system, and
 keep the server updated to prevent all those
 [nasty security bugs](http://www.wired.com/2014/12/most-dangerous-software-bugs-2014/). Lastly, my career site and
-actual resume fell far out of sync. It is much better to maintain only a [resume](https://www.pedro.ai/resume.pdf)
+actual resume fell far out of sync. It is much better to maintain only a [cv](https://www.pedro.ai/cv.pdf)
 and point to it from here.
 
 Roughly speaking, the website portion involved:

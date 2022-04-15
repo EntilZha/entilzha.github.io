@@ -5,7 +5,7 @@ Description: About Pedro Rodriguez
 Template: main_page
 save_as: index.html
 
-I am an NLP research scientist at [Facebook Reality Labs in Seattle](https://research.fb.com/people/rodriguez-pedro/).
+I am an NLP research scientist at [Meta Reality Labs in Seattle](https://research.fb.com/people/rodriguez-pedro/).
 I recently defended my PhD in Computer Science at the [University of Maryland at College Park](http://www.cs.umd.edu/) titled ["Evaluating Machine Intelligence with Question Answering"](https://www.pedro.ai/static/publications/pedro_rodriguez_phd_thesis.pdf).
 I worked in the [Computational Linguistics and Information Processing (CLIP) Lab](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page) with [Jordan Boyd-Graber](http://www.umiacs.umd.edu/~jbg/).
 
@@ -13,9 +13,9 @@ Methodologically, my research focuses on improving methods for dataset construct
 I am especially interested in re-imagining leaderboards and NLP benchmarks so that they better support long-term research.
 Thematically, I am interested in question answering, conversational information-seeking, and adjacent areas.
 
-In my free time, I am an avid skier, climber, and hiker. 
+In my free time, I am an avid skier, climber, hiker, and violinist. 
 
-<a class="button small common-button" style="width:200px;" href="{static}/resume.pdf" target="_blank">Download Resume</a>
+<a class="button small common-button" style="width:200px;" href="{static}/cv.pdf" target="_blank">Download CV</a>
 
 ### Contact
 
@@ -40,6 +40,9 @@ During my undergraduate degree, I was a research assistant in [UC Berkeley's AMP
 
 ## Service
 
+* Organizer for the [Dynamic Adversarial Data Collection (DADC) Workshop](https://dadcworkshop.github.io/) at NAACL 2022
+* ARR 2022 Reviewer
+* ARR 2021 Reviewer
 * EMNLP 2021 Program Committee (Reviewer)
 * ACL 2021 Sub-committee Co-Chair for Diversity and Inclusion
 * ACL 2021 Program Committee (Reviewer)
