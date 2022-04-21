@@ -46,6 +46,9 @@ Here are a bunch of software/tips/resources I've found. I like to have them in a
 * [Comet.ml for external hosted experiment tracking](https://comet.ml)
 * [MLFlow for self-hosted experiment tracking](https://mlflow.org/)
 
+## What are ways to make git better?
+* [Git Smartlog](https://github.com/reydanro/git-smartlog)
+
 ### What are good python debugging tools/tricks?
 
 * `ipdb` and `pdb` are fantastic for command line debugging
