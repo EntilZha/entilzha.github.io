@@ -5,7 +5,7 @@ Description: About Pedro Rodriguez
 Template: main_page
 save_as: index.html
 
-I am an NLP research scientist at [Meta Reality Labs in Seattle](https://research.fb.com/people/rodriguez-pedro/).
+I am a researcher at [FAIR Labs at Meta in Seattle](https://research.fb.com/people/rodriguez-pedro/).
 I recently defended my PhD in Computer Science at the [University of Maryland at College Park](http://www.cs.umd.edu/) titled ["Evaluating Machine Intelligence with Question Answering"](https://www.pedro.ai/static/publications/pedro_rodriguez_phd_thesis.pdf).
 I worked in the [Computational Linguistics and Information Processing (CLIP) Lab](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page) with [Jordan Boyd-Graber](http://www.umiacs.umd.edu/~jbg/).
 
@@ -41,6 +41,7 @@ During my undergraduate degree, I was a research assistant in [UC Berkeley's AMP
 ## Service
 
 * Organizer for the [Dynamic Adversarial Data Collection (DADC) Workshop](https://dadcworkshop.github.io/) at NAACL 2022
+* Grant Proposal Reviewer for [Meta AI RFP: Dynabench Data Collection and Benchmarking Platform](https://ai.facebook.com/research/request-for-proposals/dynabench/)
 * ARR 2022 Reviewer
 * ARR 2021 Reviewer
 * EMNLP 2021 Program Committee (Reviewer)
