@@ -6,19 +6,21 @@ Description: Instructions for Recruiters
 Hi and thank you for your interest in reaching out to me!
 To save us both time, I've briefly described the kind of job opportunities/requirements that interest me.
 If the job you have matches these, then feel free to reach out to me, and I'll do my best to give a prompt reply.
-If the job you have doesn't match then feel free to contact me, but don't expect a reply; perhaps sometime in the future my job requirements change and I'll reach out to you.
+If the job you have doesn't match then feel free to contact me, but don't expect a reply; perhaps sometime in the future my job requirements change, and I'll reach out to you.
 
 
 ### Contacting Me
 
 * You *must* provide details on the role and responsibilities for the job through email *before* I will chat over phone. If the role was never going to be a good fit then this save us both 10-20 minutes.
 * Do not call me before emailing role information.
+* If it is obvious you have not read my website or CV/Resume, I will ignore you message.
 
 ### Role and Responsibilities
 
-* I must be able to publish research at top-tier computer science conferences (e.g., [ACL](https://www.aclweb.org/portal/)). This is non-negotiable.
+* The role should be predominantly about fundamental research.
+* The role should **not** primarily about software engineering or product development.
 * I am primarily interested in Natural Language Processing and Machine Learning research.
-* The role should be predominantly about fundamental research and not primarily about software engineering.
+* I must be able to publish research at top-tier computer science conferences (e.g., [ACL](https://www.aclweb.org/portal/)). This should be part of the job responsibilities and/or a valued contribution. This is non-negotiable.
 
 ### Geographic Location
 
