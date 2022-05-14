@@ -1,6 +1,6 @@
 Title: Reproducible Python Environments for Science
 Date: 2022-05-13
-Tags: nlp
+Tags: engineering
 Slug: reproducible-python-environments
 Author: Pedro Rodriguez
 
