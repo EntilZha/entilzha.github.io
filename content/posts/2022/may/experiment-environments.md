@@ -103,8 +103,10 @@ I'll wrap up with a summary of the development flow.
 
 The one last thing I'll mention, is that sometimes there are dependencies that are not `pip` installable for various reasons.
 In this case, I resort to a manually and carefully updated conda environment file or documentation.
-The main package I do this for is `altair` which for rendering to PDF requires vega-lite which requires vega which requires the node stack.
+There are two main cases I've run into this for.
+First, the main package I do this for is `altair` which for rendering to PDF requires vega-lite which requires vega which requires the node stack.
 In this specific case, I start out with `conda install -c conda-forge vega-cli vega-lite-cli` then figure out what the current version of packages is to pin to.
+The second case is needing a specific version of `cuda`, which you can also specify with conda, but can't with pip
 
 Thanks and happy packaging!
 
