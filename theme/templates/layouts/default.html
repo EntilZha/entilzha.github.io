@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
-        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-        <meta name="description" content="{% block metadescription %}Pedro Rodriguez: Research Scientist in Natural Language Processing{% endblock %}">
-        <script type="text/javascript">
-            var host = "{{ HOST }}";
-            if ((host == window.location.host) && (window.location.protocol != "https:")) {
-                window.location.protocol = "https";
-            }
-        </script>
-        <link rel="canonical" href="{{ SITEURL }}" />
-        {% assets filters="cssmin", output="css/style.min.css", "css/theme.css", "css/pygments.css", "css/bootstrap.min.css", "css/fira.css" %}
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
-        {% endassets %}
-        <script type="text/javascript">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <meta name="description"
+        content="{% block metadescription %}Pedro Rodriguez: Research Scientist in Natural Language Processing{% endblock %}">
+    <script type="text/javascript">
+        var host = "{{ HOST }}";
+        if ((host == window.location.host) && (window.location.protocol != "https:")) {
+            window.location.protocol = "https";
+        }
+    </script>
+    <link rel="canonical" href="{{ SITEURL }}" />
+    {% assets filters="cssmin", output="css/style.min.css", "css/theme.css", "css/pygments.css",
+    "css/bootstrap.min.css", "css/fira.css" %}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
+    <script type="text/javascript">
         function docReady(fn) {
             // see if DOM is already available
             if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -26,25 +29,28 @@
                 document.addEventListener("DOMContentLoaded", fn);
             }
         } 
-        </script>
-        {% if GOOGLE_UA is defined %}
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_UA }}"></script>
-        <script>
+    </script>
+    {% if GOOGLE_UA is defined %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_UA }}"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', '{{ GOOGLE_UA }}');
-        </script>
-        {% endif %}
-    </head>
-  <body {% block bodyclass %}{% endblock %} style="min-width:475px">
+    </script>
+    {% endif %}
+</head>
+
+<body {% block bodyclass %}{% endblock %} style="min-width:475px">
     <div class="page-container">
-        <div class="small-16 medium-16 large-16 columns head-area bgimage" style="background-image: url({{ SITEURL }}/theme/images/side-background.jpg)">
+        <div class="small-16 medium-16 large-16 columns head-area bgimage"
+            style="background-image: url({{ SITEURL }}/theme/images/side-background.jpg)">
             {% include "partials/header.html" %}
         </div>
-        {% assets filters="uglifyjs", output="js/react-combined.js", "js/react.production.min.js", "js/react-dom.production.min.js" %}
+        {% assets filters="uglifyjs", output="js/react-combined.js", "js/react.production.min.js",
+        "js/react-dom.production.min.js" %}
         <script src="{{ SITEURL  }}/{{ ASSET_URL }}"></script>
         {% endassets %}
         <div class="small-16 medium-16 large-16 main-column">
@@ -55,5 +61,6 @@
             </main>
         </div>
     </div>
-  </body>
+</body>
+
 </html>

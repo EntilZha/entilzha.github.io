@@ -1,4 +1,4 @@
-FROM python:3.7.4
+FROM python:3.9
 
 RUN apt update
 RUN apt install -y git
