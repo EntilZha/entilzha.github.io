@@ -8,6 +8,10 @@ from bibtexparser.bwriter import BibTexWriter
 from bibtexparser.bparser import BibTexParser
 from bibtexparser.bibdatabase import BibDatabase
 from jinja2 import Environment
+from rich.console import Console
+
+
+console = Console()
 
 
 template = """
@@ -133,6 +137,32 @@ class PublicationsReader(BaseReader):
             projects = [e for e in entries if e["type"] == "project"]
             for e in entries:
                 del e["type"]
+            console.log("Found the following publications")
+            console.log("Thesis")
+            console.log(thesis)
+            console.log("Publications")
+            console.log(publications)
+            console.log("arxiv")
+            console.log(arxiv)
+            console.log("workshops")
+            console.log(workshops)
+            console.log("non_refereed")
+            console.log(non_refereed)
+            console.log("media")
+            console.log(media)
+            console.log("projects")
+            console.log(projects)
+            console.log("Total entries:", len(entries))
+            console.log(
+                "Entries Sorted:",
+                len(thesis)
+                + len(publications)
+                + len(arxiv)
+                + len(workshops)
+                + len(non_refereed)
+                + len(media)
+                + len(projects),
+            )
             jinja_env = Environment()
             jinja_env.filters["compile_jsx"] = compile_jsx
             html = (
@@ -146,7 +176,7 @@ class PublicationsReader(BaseReader):
                     projects=projects,
                     workshops=workshops,
                 )
-                .replace("{\~a}", "ã")
+                .replace("Joao", "João")
             )
         return html, parsed
 
