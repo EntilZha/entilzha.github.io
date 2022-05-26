@@ -135,14 +135,18 @@ class PublicationsReader(BaseReader):
                 del e["type"]
             jinja_env = Environment()
             jinja_env.filters["compile_jsx"] = compile_jsx
-            html = jinja_env.from_string(template).render(
-                thesis=thesis,
-                publications=publications,
-                media=media,
-                arxiv=arxiv,
-                non_refereed=non_refereed,
-                projects=projects,
-                workshops=workshops,
+            html = (
+                jinja_env.from_string(template)
+                .render(
+                    thesis=thesis,
+                    publications=publications,
+                    media=media,
+                    arxiv=arxiv,
+                    non_refereed=non_refereed,
+                    projects=projects,
+                    workshops=workshops,
+                )
+                .replace("{\~a}", "ã")
             )
         return html, parsed
 
