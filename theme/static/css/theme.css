@@ -5948,11 +5948,11 @@ a:hover {
 }
 
 .fi-social-google-scholar {
-  background: rgba(51, 51, 51, 0.8) url(/theme/images/google-scholar.png) center no-repeat !important;
+  background: rgba(51, 51, 51, 0.8) url(/theme/images/semantic-scholar-icon.png) center no-repeat !important;
 }
 
 .fi-social-google-scholar:hover {
-  background: #4a89dc url(/theme/images/google-scholar.png) center no-repeat !important;
+  background: #4a89dc url(/theme/images/semantic-scholar-icon.png) center no-repeat !important;
 }
 
 .post-content .cell .prompt {
