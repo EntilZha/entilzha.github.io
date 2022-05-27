@@ -5949,10 +5949,12 @@ a:hover {
 
 .fi-social-google-scholar {
   background: rgba(51, 51, 51, 0.8) url(/theme/images/semantic-scholar-icon.png) center no-repeat !important;
+  background-size: cover!important;
 }
 
 .fi-social-google-scholar:hover {
   background: #4a89dc url(/theme/images/semantic-scholar-icon.png) center no-repeat !important;
+  background-size: cover!important;
 }
 
 .post-content .cell .prompt {
