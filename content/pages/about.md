@@ -41,6 +41,7 @@ During my undergraduate degree, I was a research assistant in [UC Berkeley's AMP
 
 ## Service
 
+* Area Chair for COLING 2022
 * Organizer for the [Dynamic Adversarial Data Collection (DADC) Workshop](https://dadcworkshop.github.io/) at NAACL 2022
 * Grant Proposal Reviewer for [Meta AI RFP: Dynabench Data Collection and Benchmarking Platform](https://ai.facebook.com/research/request-for-proposals/dynabench/)
 * Reviewer for the [Workshop on Insights from Negative Results in NLP](https://insights-workshop.github.io/)
