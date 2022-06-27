@@ -15,11 +15,13 @@ Coming soon
 
 ## Code
 
-Coming Soon
+Experimental code is open sourced and available at [github.com/facebookresearch/mm-retrieval-evaluation](https://github.com/facebookresearch/mm-retrieval-evaluation).
+Instructions for complete reproduction are in the readme.
 
 ## Data
 
-Coming soon
+Data associated with the paper is in the [`data` directory of the open source repository](https://github.com/facebookresearch/mm-retrieval-evaluation/tree/main/data), stored in Git LFS.
+Documentation for where to download external datasets to is in [`bin/download_data.sh`](https://github.com/facebookresearch/mm-retrieval-evaluation/blob/main/bin/download_data.sh)
 
 ## Contact
 
