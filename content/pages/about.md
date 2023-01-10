@@ -14,7 +14,7 @@ Methodologically, my research focuses on improving how we evaluate machine learn
 This encapsulates improving how we build datasets, improving evaluation methodology, creating better benchmarks, and making sure that these align with intended use.
 Topically, I am interested in question answering, information retrieval, and RL for compiler optimization.
 
-In my free time, I am an avid skier, climber, hiker, and violinist. 
+In my free time, I am an avid skier, climber, hiker, and [violinist](/violin). 
 
 <a class="button small common-button" style="width:200px;" href="{static}/cv.pdf" target="_blank">Download CV</a>
 
