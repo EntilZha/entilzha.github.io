@@ -7,7 +7,7 @@ author: "Pedro Rodriguez"
 ---
 
 The topic of how to create and maintain reproducible experiments has come up a few times recently.
-I've previously discussed ways to do [reproducible hyper parameter sweeps](https://www.pedro.ai/blog/2020/03/24/reproducible-ml-and-parameter-sweeps/) and as part of that briefly discussed using anaconda environments.
+I've previously discussed ways to do [reproducible hyper parameter sweeps](/blog/2020/03/24/reproducible-ml-and-parameter-sweeps/) and as part of that briefly discussed using anaconda environments.
 This (short) post elaborates on that with what I've learned since then.
 I'll break this into two parts: (1) how to manage python installations and (2) how to manage python packages.
 The first part will discuss how to actually install python and specify which version of python to use.

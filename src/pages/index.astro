@@ -22,19 +22,22 @@ const { Content } = await render(home);
       alt="Pedro Rodriguez"
     />
     <div>
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Pedro Rodriguez</h1>
-      <p class="mt-1 text-lg font-medium text-cyan-700 dark:text-cyan-400">
-        AI Research Scientist
-      </p>
+      <div class="w-fit">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Pedro Rodriguez</h1>
+        <p class="mt-1 text-center text-lg font-medium text-cyan-700 dark:text-cyan-400">
+          AI Research Scientist
+        </p>
+      </div>
       <div class="mt-4 flex flex-wrap items-center gap-4 text-gray-500 dark:text-gray-400">
         <a
           href="https://www.semanticscholar.org/author/145009056"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Semantic Scholar"
-          class="hover:text-cyan-600 transition-colors"
+          class="group relative inline-flex h-9 w-9 items-center justify-center rounded-full transition duration-200 hover:scale-110 hover:text-cyan-600"
         >
-          <svg viewBox="0 0 640 512" fill="currentColor" class="w-5 h-5" aria-hidden="true">
+          <span class="pointer-events-none absolute inset-0 scale-0 rounded-full bg-cyan-100 transition-transform duration-200 ease-out group-hover:scale-100 dark:bg-cyan-900/40"></span>
+          <svg viewBox="0 0 640 512" fill="currentColor" class="relative w-5 h-5" aria-hidden="true">
             <path
               d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-109.6C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"
             ></path>
@@ -45,9 +48,10 @@ const { Content } = await render(home);
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          class="hover:text-cyan-600 transition-colors"
+          class="group relative inline-flex h-9 w-9 items-center justify-center rounded-full transition duration-200 hover:scale-110 hover:text-cyan-600"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true">
+          <span class="pointer-events-none absolute inset-0 scale-0 rounded-full bg-cyan-100 transition-transform duration-200 ease-out group-hover:scale-100 dark:bg-cyan-900/40"></span>
+          <svg viewBox="0 0 24 24" fill="currentColor" class="relative w-5 h-5" aria-hidden="true">
             <path
               d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
             ></path>
@@ -58,9 +62,10 @@ const { Content } = await render(home);
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          class="hover:text-cyan-600 transition-colors"
+          class="group relative inline-flex h-9 w-9 items-center justify-center rounded-full transition duration-200 hover:scale-110 hover:text-cyan-600"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true">
+          <span class="pointer-events-none absolute inset-0 scale-0 rounded-full bg-cyan-100 transition-transform duration-200 ease-out group-hover:scale-100 dark:bg-cyan-900/40"></span>
+          <svg viewBox="0 0 24 24" fill="currentColor" class="relative w-5 h-5" aria-hidden="true">
             <path
               d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.509 11.509 0 013.003-.404c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
             ></path>

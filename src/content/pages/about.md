@@ -6,16 +6,15 @@ description: "About Pedro Rodriguez"
 template: "main_page"
 ---
 
-I am a researcher at [FAIR Labs at Meta in Seattle](https://research.fb.com/people/rodriguez-pedro/).
-I completed my PhD in Computer Science at the [University of Maryland at College Park](http://www.cs.umd.edu/) titled ["Evaluating Machine Intelligence with Question Answering"](https://www.pedro.ai/static/publications/pedro_rodriguez_phd_thesis.pdf) in 2021.
-I worked in the [Computational Linguistics and Information Processing (CLIP) Lab](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page) with [Jordan Boyd-Graber](http://www.umiacs.umd.edu/~jbg/).
+I am an AI Research Scientist at [MSL FAIR at Meta in Seattle](https://ai.meta.com/people/1456066821689392/pedro-rodriguez/).
+At FAIR, my research has spanned topics in NLP such as model architectures, evaluation, and data collection.
+I've contributed to efficient and multimodal architectures—including the [Byte Latent Transformer](https://aclanthology.org/2025.acl-long.453) (ACL 2025 Outstanding Paper) and [Chameleon](https://arxiv.org/abs/2405.09818).
+My evaluation work spans [assessing the validity of AI benchmarks](http://arxiv.org/abs/2210.05038), dynamic data collection and benchmarking through [Dynatask](https://aclanthology.org/2022.acl-demo.17)/Dynabench, and applying [item response theory to NLP leaderboards](https://aclanthology.org/2021.acl-long.346).
+I currently work on [AI & Human Co-Improvement](https://arxiv.org/abs/2512.05356v1).
 
-Thus far I have primarily worked in Natural Language Processing (NLP), but have recently started working in Reinforcement Learning (RL) for Compiler Optimization as well.
-Methodologically, my research focuses on improving how we evaluate machine learning and NLP models.
-This encapsulates improving how we build datasets, improving evaluation methodology, creating better benchmarks, and making sure that these align with intended use.
-Topically, I am interested in question answering, information retrieval, and RL for compiler optimization.
+I completed my PhD in Computer Science at the [University of Maryland at College Park](http://www.cs.umd.edu/) titled ["Evaluating Machine Intelligence with Question Answering"](/static/publications/pedro_rodriguez_phd_thesis.pdf) in 2021 where I worked in the [Computational Linguistics and Information Processing (CLIP) Lab](https://wiki.umiacs.umd.edu/clip/index.php/Main_Page) with [Jordan Boyd-Graber](http://www.umiacs.umd.edu/~jbg/).
 
-In my free time, I am an avid skier, climber, hiker, and [violinist](/violin/).
+I am also a [nature/wildlife/landscape photographer](https://photography.pedro.ai), avid skier, climber, hiker, and [violinist](/violin/).
 
 ### Contact
 
@@ -23,7 +22,7 @@ Contact me at <a target="_blank" href="mailto:me@pedro.ai">me@pedro.ai</a>. Recr
 
 ## Industry Experience
 
-- I have been a researcher at Meta AI since April 2021
+- I have been an AI Research Scientist at Meta since 2021 and in FAIR since 2022.
 - Throughout my undergraduate and graduate studies I interned extensively and accumulated over three years of industry experience.
 - I was a research intern at [Google AI-Zürich](https://ai.google/research/join-us/zurich/) working on question answering and fact verification during Winter 2019/20.
 - At [Facebook Conversational AI](https://ai.facebook.com/research/conversational-ai) I worked on conversational information seeking which resulted in an [EMNLP 2020 publication](https://www.aclweb.org/anthology/2020.emnlp-main.655/).

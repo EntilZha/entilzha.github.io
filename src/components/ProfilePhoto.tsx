@@ -41,7 +41,7 @@ export default function ProfilePhoto({ src, full, alt }: Props) {
       {open && (
         <div
           onClick={() => setOpen(false)}
-          className="fixed inset-0 z-[100] flex cursor-zoom-out items-center justify-center bg-black/85 p-4"
+          className="fixed inset-0 z-[10000] flex cursor-zoom-out items-center justify-center bg-black/85 p-4"
           role="dialog"
           aria-modal="true"
         >

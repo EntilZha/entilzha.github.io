@@ -23,20 +23,30 @@ Most of what I post is either classical, video game, or movie music.
 
 ### Eine Kleine Nachtmusik, II. Romanze: Andante (Recital)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HYBzxay-8Xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position:relative;width:100%;max-width:720px;margin:1.5rem auto;aspect-ratio:16/9">
+<iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0.5rem" src="https://www.youtube.com/embed/HYBzxay-8Xc" title="Eine Kleine Nachtmusik, II. Romanze: Andante" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### West Seattle Concert Orchestra, Winter 2022 Performance (1st Violin Section)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QCg87o7bSjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position:relative;width:100%;max-width:720px;margin:1.5rem auto;aspect-ratio:16/9">
+<iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0.5rem" src="https://www.youtube.com/embed/QCg87o7bSjs" title="West Seattle Concert Orchestra, Winter 2022 Performance" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### Bach Partita 2, Allemande (Recital)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MfJC05vwaNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position:relative;width:100%;max-width:720px;margin:1.5rem auto;aspect-ratio:16/9">
+<iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0.5rem" src="https://www.youtube.com/embed/MfJC05vwaNE" title="Bach Partita 2, Allemande" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### Star Wars: Across the Stars
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/f9GgFpkaB7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position:relative;width:100%;max-width:720px;margin:1.5rem auto;aspect-ratio:16/9">
+<iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0.5rem" src="https://www.youtube.com/embed/f9GgFpkaB7M" title="Star Wars: Across the Stars" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### Forest Medley (includes Zelda/Pokemon)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-IibfhZaWzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position:relative;width:100%;max-width:720px;margin:1.5rem auto;aspect-ratio:16/9">
+<iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0.5rem" src="https://www.youtube.com/embed/-IibfhZaWzQ" title="Forest Medley (includes Zelda/Pokemon)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>

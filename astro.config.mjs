@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +23,12 @@ export default defineConfig({
 
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [
+      rehypeKatex,
+      // Open external (http/https) links in a new tab. Relative/internal
+      // links (e.g. /violin/) are left untouched.
+      [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
+    ],
     shikiConfig: {
       theme: 'github-light',
       wrap: true,

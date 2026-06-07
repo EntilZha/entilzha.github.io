@@ -6,7 +6,7 @@ slug: "allennlp-callback-trainer-cometml"
 author: "Pedro Rodriguez"
 ---
 
-In my [last post](https://www.pedro.ai/blog/2020/03/24/reproducible-ml-and-parameter-sweeps/) on parameter sweeps, I mentioned that I found a nice way to combine [AllenNLP](https://allennlp.org/) and [comet.ml](https://www.comet.ml/).
+In my [last post](/blog/2020/03/24/reproducible-ml-and-parameter-sweeps/) on parameter sweeps, I mentioned that I found a nice way to combine [AllenNLP](https://allennlp.org/) and [comet.ml](https://www.comet.ml/).
 In this post, I'll share my code that does this via the (experimental) [callback trainer](https://github.com/allenai/allennlp/blob/v0.9.0/allennlp/training/callback_trainer.py).
 The `1.0` release of AllenNLP is currently [actively in development](https://github.com/allenai/allennlp/milestone/10) and the callback trainer itself has been changing quite a bit (Issues [3269](https://github.com/allenai/allennlp/issues/3269), [3519](https://github.com/allenai/allennlp/issues/3519), and [3913](https://github.com/allenai/allennlp/issues/3913)).
 Given that, everything in this post uses version `0.9.0` of AllenNLP.

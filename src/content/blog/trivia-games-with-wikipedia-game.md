@@ -17,4 +17,4 @@ In this video talk I discuss recent work which uses a network science technique 
 </div>
 
 
-This research is supported by an [NSF Grant](http://www.umiacs.umd.edu/~jbg/projects/IIS-1320538.html), and more information about the project overall can be found in a [prior talk](https://www.pedro.ai/blog/2016/11/21/machine-learning-in-trivia-games/).
+This research is supported by an [NSF Grant](http://www.umiacs.umd.edu/~jbg/projects/IIS-1320538.html), and more information about the project overall can be found in a [prior talk](/blog/2016/11/21/machine-learning-in-trivia-games/).

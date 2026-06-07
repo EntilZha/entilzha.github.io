@@ -30,7 +30,7 @@ export default function BibtexEntry({ bibtex, defaultOpen = false }: Props) {
         [{open ? "hide bibtex" : "bibtex"}]
       </button>
       {open && (
-        <div className="relative mt-2 max-w-full">
+        <div className="relative mt-2 w-full max-w-full">
           <button
             type="button"
             onClick={copy}
