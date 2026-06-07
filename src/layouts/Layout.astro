@@ -48,6 +48,14 @@ const currentYear = new Date().getFullYear();
 
     <!-- Canonical URL -->
     <link rel="canonical" href={Astro.url.href} />
+
+    <!-- Atom feed autodiscovery -->
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Pedro Rodriguez"
+      href="/feeds/all.atom.xml"
+    />
   </head>
   <body>
     <Navbar client:load />
