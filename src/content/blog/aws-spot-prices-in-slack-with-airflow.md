@@ -214,11 +214,11 @@ The `g.map` call takes as argument the main plotting function (in this case `plt
 
 ### US West 1
 
-![aws spot prices us-west-1](/static/blog/aws-spot-prices-west.png)
+![aws spot prices us-west-1](/blog/2016/09/22/aws-spot-prices-in-slack-with-airflow/aws-spot-prices-west.png)
 
 ### US East 1
 
-![aws spot prices us-east-1](/static/blog/aws-spot-prices-east.png)
+![aws spot prices us-east-1](/blog/2016/09/22/aws-spot-prices-in-slack-with-airflow/aws-spot-prices-east.png)
 
 Certainly looks like us-east-1 is much more volatile for spot bidding which makes sense since it is also one of the oldest AWS regions. Lets move on to sending these plots to Slack.
 

@@ -4,3 +4,4 @@ http://entilzha.io/* https://www.pedro.ai/:splat 301!
 https://entilzha.io/* https://www.pedro.ai/:splat 301!
 https://entilzha.netlify.com/* https://www.pedro.ai/:splat 301!
 /about https://www.pedro.ai/ 301!
+/blog/index2.html /blog/ 301!

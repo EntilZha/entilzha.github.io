@@ -9,9 +9,8 @@ Here are a bunch of software/tips/resources I've found. I like to have them in a
 
 ## What are useful python cheatsheets?
 
-* [PDB Cheatsheet](static/pdf/pdb-cheatsheet.pdf) from [https://github.com/nblock/pdb-cheatsheet](https://github.com/nblock/pdb-cheatsheet)
-* [Pandas Cheatsheet](static/pdf/pandas-cheat-sheet.pdf) from [https://pandas.pydata.org/](https://pandas.pydata.org/
-)
+* [PDB Cheatsheet](/static/pdf/pdb-cheatsheet.pdf) from [https://github.com/nblock/pdb-cheatsheet](https://github.com/nblock/pdb-cheatsheet)
+* [Pandas Cheatsheet](/static/pdf/pandas-cheat-sheet.pdf) from [https://pandas.pydata.org/](https://pandas.pydata.org/)
 
 
 ## Software
@@ -68,7 +67,7 @@ Here are a bunch of software/tips/resources I've found. I like to have them in a
 
 ### What are good python libraries for creating websites?
 
-* For small APIs, [FastAPI](fastapi.tiangolo.com/) or websites that you don't need/want pre-made user system
+* For small APIs, [FastAPI](https://fastapi.tiangolo.com/) or websites that you don't need/want pre-made user system
 * For more "out of the box", but more opinionated use [Django](https://www.djangoproject.com/)
 * For static sites Static site (like this page) [Pelican](https://docs.getpelican.com/en/stable/)
 
