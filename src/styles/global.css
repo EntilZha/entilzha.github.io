@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+@plugin "@tailwindcss/typography";
+
+/*
+ * Dark mode is disabled. Scope the `dark:` variant to an explicit `.dark`
+ * class that is never added, so leftover `dark:` utilities stay inert and
+ * cannot re-activate via the OS prefers-color-scheme media query.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Legacy content buttons. A handful of migrated markdown pages embed
+ * <a class="button ..."> links (e.g. "Download CV"). Give them a Tailwind-ish
+ * look so they don't render as bare links now that Bootstrap/Foundation is gone.
+ */
+.button,
+.common-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #0891b2; /* cyan-600 */
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+.button:hover,
+.common-button:hover {
+  background-color: #0e7490; /* cyan-700 */
+}
+
+/*
+ * Code blocks. Shiki's light theme sets a near-white background that blends
+ * into the page, so give fenced blocks a distinct tinted background + border.
+ * `!important` is needed to beat Shiki's inline background-color.
+ */
+pre.astro-code {
+  background-color: #f3f4f6 !important; /* gray-100 */
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* About page: underline section headings and balance the long lists. */
+.about-prose h2 {
+  margin-top: 2.25rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e5e7eb; /* gray-200 */
+}
+/* The Service list is long and made of short items — flow it into two columns. */
+.about-prose #service + ul {
+  columns: 2;
+  column-gap: 2.5rem;
+}
+.about-prose #service + ul > li {
+  break-inside: avoid;
+}
+@media (max-width: 640px) {
+  .about-prose #service + ul {
+    columns: 1;
+  }
+}
+
+/* Copy button injected onto bibtex code blocks (see Layout.astro script). */
+.code-copy-wrap {
+  position: relative;
+}
+.bibtex-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.3rem;
+  background-color: #ffffff;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4b5563; /* gray-600 */
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+.bibtex-copy-btn:hover {
+  color: #0e7490; /* cyan-700 */
+  border-color: #67e8f9; /* cyan-300 */
+}
+
+/* Inline code: give it a tinted pill so it stands out from prose text. */
+.prose :not(pre) > code {
+  background-color: #f3f4f6; /* gray-100 */
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #0e7490; /* cyan-700 accent */
+}
+/* Remove Tailwind Typography's default backtick quotes around inline code. */
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}

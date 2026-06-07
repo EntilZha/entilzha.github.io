@@ -1,24 +1,30 @@
 {
   "name": "entilzha.github.io",
-  "version": "1.0.0",
-  "description": "To build my website there are two commands to run. For my sanity, I've encoded all the dependencies in a Dockerfile so the website can be fully built from that.",
-  "main": "index.js",
+  "type": "module",
+  "version": "2.0.0",
+  "description": "Pedro Rodriguez's academic website (www.pedro.ai), built with Astro.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "astro build && netlify deploy --dir=dist --prod",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EntilZha/entilzha.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EntilZha/entilzha.github.io/issues"
-  },
-  "homepage": "https://github.com/EntilZha/entilzha.github.io#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2"
+    "@astrojs/react": "^4.2.7",
+    "@astrojs/sitemap": "^3.7.0",
+    "@headlessui/react": "^2.2.9",
+    "@heroicons/react": "^2.2.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "astro": "^5.7.13",
+    "katex": "^0.16.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "tailwindcss": "^4.1.7"
   }
 }

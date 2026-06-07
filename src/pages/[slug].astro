@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from "astro:content";
+import PageLayout from "../layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages
+    // The "home" page (about.md) is rendered at "/" by index.astro.
+    .filter((page) => page.data.slug !== "home")
+    .map((page) => ({
+      params: { slug: page.data.slug },
+      props: { page },
+    }));
+}
+
+// Project pages that correspond to a publication — these get an
+// "All publications" back link to mirror the blog's back link.
+const projectSlugs = new Set([
+  "curiosity",
+  "leaderboard-acl2021",
+  "multimodal-retrieval-evaluation",
+  "multidim-irt",
+  "paradigms-emnlp2021",
+]);
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+
+// Back links: project pages -> publications; recruiting -> about (home).
+let backHref: string | undefined;
+let backLabel: string | undefined;
+if (projectSlugs.has(page.data.slug)) {
+  backHref = "/publications/";
+  backLabel = "All publications";
+} else if (page.data.slug === "recruiting") {
+  backHref = "/";
+  backLabel = "About";
+}
+---
+
+<PageLayout
+  title={page.data.title}
+  description={page.data.description}
+  backHref={backHref}
+  backLabel={backLabel}
+>
+  <Content />
+</PageLayout>

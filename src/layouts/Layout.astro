@@ -1,0 +1,133 @@
+---
+import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop";
+import { photographyUrl } from "../config/nav";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Pedro Rodriguez",
+  description = "Pedro Rodriguez is a researcher in natural language processing and machine learning evaluation.",
+  image,
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:site_name" content="Pedro Rodriguez" />
+    {image && <meta property="og:image" content={new URL(image, Astro.site).href} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={Astro.url.href} />
+  </head>
+  <body>
+    <Navbar client:load />
+    <slot name="hero" />
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <slot />
+    </main>
+    <footer class="border-t border-gray-200 dark:border-gray-700 mt-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500 dark:text-gray-400"
+        >
+          <p>&copy; {currentYear} Pedro Rodriguez</p>
+          <div class="flex items-center gap-4">
+            <a
+              href="/blog/"
+              class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Blog</a
+            >
+            <a
+              href="/publications/"
+              class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Publications</a
+            >
+            <a
+              href="mailto:me@pedro.ai"
+              class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Email</a
+            >
+            <a
+              href={photographyUrl}
+              class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Photography</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <ScrollToTop client:load />
+
+    <script>
+      // Add a "Copy" button to bibtex code blocks (e.g. the citation blocks on
+      // project pages). Targets fenced blocks whose content looks like BibTeX.
+      function addBibtexCopyButtons() {
+        document.querySelectorAll("pre.astro-code").forEach((pre) => {
+          const code = pre.querySelector("code");
+          if (!code) return;
+          const text = code.textContent || "";
+          if (!/^\s*@\w+\s*\{/.test(text)) return;
+          if ((pre.parentElement as HTMLElement)?.classList.contains("code-copy-wrap")) return;
+
+          const wrap = document.createElement("div");
+          wrap.className = "code-copy-wrap";
+          pre.parentNode?.insertBefore(wrap, pre);
+          wrap.appendChild(pre);
+
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "bibtex-copy-btn";
+          btn.textContent = "Copy";
+          btn.addEventListener("click", async () => {
+            try {
+              await navigator.clipboard.writeText(text);
+              btn.textContent = "Copied!";
+              setTimeout(() => (btn.textContent = "Copy"), 1500);
+            } catch {
+              /* clipboard unavailable */
+            }
+          });
+          wrap.appendChild(btn);
+        });
+      }
+      addBibtexCopyButtons();
+    </script>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+</style>

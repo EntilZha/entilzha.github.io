@@ -1,7 +1,18 @@
+# build output
+dist/
 output/
+.astro/
+
+# dependencies
+node_modules/
+
+# generated types
+
+# misc
 *.pid
 *.pyc
-node_modules/
 .pytest_cache
 .vscode
 .idea
+.DS_Store
+.netlify

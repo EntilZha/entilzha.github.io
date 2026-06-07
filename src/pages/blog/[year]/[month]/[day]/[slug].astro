@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from "astro:content";
+import PostLayout from "../../../../../layouts/PostLayout.astro";
+import { dateParts } from "../../../../../utils/date";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => {
+    const { year, month, day } = dateParts(post.data.date);
+    return {
+      // Y/M/D are derived from the post's date (zero-padded), NOT the file
+      // path — this reproduces the legacy Pelican URL exactly.
+      params: { year, month, day, slug: post.data.slug },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<PostLayout
+  title={post.data.title}
+  date={post.data.date}
+  tags={post.data.tags}
+  description={post.data.description}
+>
+  <Content />
+</PostLayout>

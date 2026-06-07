@@ -1,0 +1,29 @@
+---
+import Layout from "./Layout.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  backHref?: string;
+  backLabel?: string;
+}
+
+const { title, description, backHref, backLabel } = Astro.props;
+---
+
+<Layout title={`${title} · Pedro Rodriguez`} description={description}>
+  <article
+    class="prose prose-gray dark:prose-invert max-w-none prose-a:text-cyan-600 dark:prose-a:text-cyan-400 prose-headings:font-semibold"
+  >
+    {
+      backHref && (
+        <a href={backHref} class="not-prose text-sm text-cyan-600 dark:text-cyan-400 hover:underline">
+          &larr; {backLabel}
+        </a>
+      )
+    }
+    <h1>{title}</h1>
+    <slot />
+  </article>
+  <slot name="after" />
+</Layout>
