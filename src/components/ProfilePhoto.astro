@@ -1,0 +1,68 @@
+---
+// Round profile photo that opens a full-size lightbox on click.
+// Plain Astro + vanilla JS (no framework runtime, no hydration).
+interface Props {
+  src: string;
+  full: string;
+  alt: string;
+}
+const { src, full, alt } = Astro.props;
+---
+
+<button
+  type="button"
+  data-photo-open
+  aria-label="View full photo"
+  class="group relative shrink-0 cursor-zoom-in rounded-full focus:outline-none"
+>
+  <img
+    src={src}
+    alt={alt}
+    width={192}
+    height={192}
+    class="h-48 w-48 rounded-full object-cover ring-2 ring-gray-200 shadow-md transition group-hover:ring-cyan-400"
+  />
+  <span class="pointer-events-none absolute inset-0 rounded-full bg-black/0 transition group-hover:bg-black/10"></span>
+</button>
+
+<div
+  data-photo-modal
+  hidden
+  class="fixed inset-0 z-[10000] flex cursor-zoom-out items-center justify-center bg-black/85 p-4"
+  role="dialog"
+  aria-modal="true"
+>
+  <img
+    src={full}
+    alt={alt}
+    data-photo-full
+    class="max-h-[92vh] max-w-[92vw] rounded-lg shadow-2xl"
+  />
+  <button
+    type="button"
+    data-photo-close
+    aria-label="Close"
+    class="absolute top-4 right-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+</div>
+
+<script>
+  const openBtn = document.querySelector<HTMLButtonElement>("[data-photo-open]");
+  const modal = document.querySelector<HTMLElement>("[data-photo-modal]");
+  if (openBtn && modal) {
+    const fullImg = modal.querySelector<HTMLImageElement>("[data-photo-full]");
+    const setOpen = (isOpen: boolean) => {
+      modal.hidden = !isOpen;
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    };
+    openBtn.addEventListener("click", () => setOpen(true));
+    // Click on the backdrop closes; clicking the image itself does not.
+    modal.addEventListener("click", () => setOpen(false));
+    fullImg?.addEventListener("click", (e) => e.stopPropagation());
+    document.addEventListener("keydown", (e) => e.key === "Escape" && setOpen(false));
+  }
+</script>

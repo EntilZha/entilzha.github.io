@@ -3,11 +3,20 @@
 @plugin "@tailwindcss/typography";
 
 /*
- * Dark mode is disabled. Scope the `dark:` variant to an explicit `.dark`
- * class that is never added, so leftover `dark:` utilities stay inert and
- * cannot re-activate via the OS prefers-color-scheme media query.
+ * Respect users who prefer reduced motion: neutralize transitions, animations,
+ * and smooth scrolling site-wide (covers icon hovers, the scroll-to-top button,
+ * card hovers, etc.).
  */
-@custom-variant dark (&:where(.dark, .dark *));
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /*
  * Legacy content buttons. A handful of migrated markdown pages embed

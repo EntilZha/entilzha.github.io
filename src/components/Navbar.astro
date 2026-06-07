@@ -1,0 +1,277 @@
+---
+import { primaryNav, personalNav } from "../config/nav";
+
+const pathname = Astro.url.pathname;
+const isActive = (href: string) => pathname === href;
+const personalActive = personalNav.some((i) => i.href === pathname);
+
+const linkBase = "text-sm/6 font-semibold text-gray-900 transition-colors border-b-2 pb-0.5";
+const linkOn = "border-sky-500";
+const linkOff = "border-transparent hover:border-sky-200";
+
+// Inline icon paths (heroicons) keyed by personal nav item name.
+const personalIconPaths: Record<string, string> = {
+  Photography:
+    "M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316ZM16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z",
+  Violin:
+    "M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163V6.553m0 6V3.75L9 6.75v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 17.053V6.75",
+};
+
+const instagramPath =
+  "M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z";
+---
+
+<header class="sticky top-0 z-[9999] bg-white shadow-md">
+  <nav
+    aria-label="Global"
+    class="mx-auto flex max-w-7xl items-center justify-between py-3 px-6 lg:px-8"
+  >
+    <div class="flex lg:flex-1">
+      <a
+        href="/"
+        class="-m-1.5 flex items-center gap-3 p-1.5 text-lg font-bold text-gray-900"
+      >
+        <img src="/favicon.ico" alt="" class="h-8 w-8" />
+        Pedro Rodriguez
+      </a>
+    </div>
+
+    <!-- Mobile: open menu -->
+    <div class="flex lg:hidden">
+      <button
+        type="button"
+        data-nav-open
+        aria-label="Open main menu"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          class="size-6"
+          aria-hidden="true"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop nav -->
+    <div class="hidden lg:flex lg:items-center lg:gap-x-10">
+      {
+        primaryNav.map((item) => (
+          <a href={item.href} class={`${linkBase} ${isActive(item.href) ? linkOn : linkOff}`}>
+            {item.name}
+          </a>
+        ))
+      }
+
+      <!-- Personal dropdown -->
+      <div class="relative" data-dropdown>
+        <button
+          type="button"
+          data-dropdown-toggle
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="group flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 cursor-pointer"
+        >
+          <span
+            class={`border-b-2 pb-0.5 ${personalActive ? "border-sky-500" : "border-transparent group-hover:border-sky-200"}`}
+          >
+            Personal
+          </span>
+          <svg viewBox="0 0 20 20" fill="currentColor" class="size-5 flex-none text-gray-400" aria-hidden="true" data-dropdown-chevron>
+            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <div
+          data-dropdown-menu
+          hidden
+          class="absolute right-0 z-10 mt-3 w-72 overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5"
+        >
+          <div class="p-2">
+            {
+              personalNav.map((item) => (
+                <a
+                  href={item.href}
+                  {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  class="group flex items-center gap-x-3 rounded-lg p-3 hover:bg-gray-50"
+                >
+                  <div class="flex size-9 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-5 text-gray-600 group-hover:text-cyan-600" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d={personalIconPaths[item.name]} />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-gray-900">{item.name}</div>
+                    <div class="text-xs text-gray-500">{item.description}</div>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://www.instagram.com/entilzha_pr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        class="text-gray-600 hover:text-cyan-600 transition-colors"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" d={instagramPath} clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Mobile slide-over menu -->
+  <div data-mobile-menu hidden class="lg:hidden">
+    <div data-mobile-backdrop class="fixed inset-0 z-[9998] bg-black/20"></div>
+    <div class="fixed inset-y-0 right-0 z-[9999] w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="flex items-center justify-between">
+        <a href="/" class="-m-1.5 flex items-center gap-3 p-1.5 text-lg font-bold text-gray-900">
+          <img src="/favicon.ico" alt="" class="h-8 w-8" />
+          Pedro Rodriguez
+        </a>
+        <button
+          type="button"
+          data-nav-close
+          aria-label="Close menu"
+          class="-m-2.5 rounded-md p-2.5 text-gray-700"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6">
+            {
+              primaryNav.map((item) => (
+                <a
+                  href={item.href}
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  {item.name}
+                </a>
+              ))
+            }
+
+            <div class="-mx-3" data-disclosure>
+              <button
+                type="button"
+                data-disclosure-toggle
+                aria-expanded="false"
+                class="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+              >
+                Personal
+                <svg viewBox="0 0 20 20" fill="currentColor" class="size-5 flex-none transition-transform" aria-hidden="true" data-disclosure-chevron>
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div data-disclosure-panel hidden class="mt-2 space-y-2">
+                {
+                  personalNav.map((item) => (
+                    <a
+                      href={item.href}
+                      {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      class="flex items-center gap-x-3 rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-5 flex-none text-gray-600" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d={personalIconPaths[item.name]} />
+                      </svg>
+                      <span>{item.name}</span>
+                    </a>
+                  ))
+                }
+              </div>
+            </div>
+
+            <a
+              href="https://www.instagram.com/entilzha_pr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="-mx-3 flex items-center gap-x-3 rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+            >
+              <svg class="size-5 flex-none" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d={instagramPath} clip-rule="evenodd" />
+              </svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Personal dropdown (desktop): click to toggle, hover to open, close on
+  // outside click / Escape.
+  const dropdown = document.querySelector<HTMLElement>("[data-dropdown]");
+  if (dropdown) {
+    const toggle = dropdown.querySelector<HTMLButtonElement>("[data-dropdown-toggle]")!;
+    const menu = dropdown.querySelector<HTMLElement>("[data-dropdown-menu]")!;
+    let closeTimer: ReturnType<typeof setTimeout> | null = null;
+
+    const open = () => {
+      if (closeTimer) clearTimeout(closeTimer);
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+    };
+    const close = () => {
+      menu.hidden = true;
+      toggle.setAttribute("aria-expanded", "false");
+    };
+    const startClose = () => {
+      if (closeTimer) clearTimeout(closeTimer);
+      closeTimer = setTimeout(close, 200);
+    };
+
+    toggle.addEventListener("click", () => (menu.hidden ? open() : close()));
+    dropdown.addEventListener("mouseenter", open);
+    dropdown.addEventListener("mouseleave", startClose);
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target as Node)) close();
+    });
+    document.addEventListener("keydown", (e) => e.key === "Escape" && close());
+  }
+
+  // Mobile slide-over menu.
+  const mobile = document.querySelector<HTMLElement>("[data-mobile-menu]");
+  if (mobile) {
+    const openBtn = document.querySelector<HTMLButtonElement>("[data-nav-open]")!;
+    const closeBtn = mobile.querySelector<HTMLButtonElement>("[data-nav-close]")!;
+    const backdrop = mobile.querySelector<HTMLElement>("[data-mobile-backdrop]")!;
+
+    const setOpen = (isOpen: boolean) => {
+      mobile.hidden = !isOpen;
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    };
+
+    openBtn.addEventListener("click", () => setOpen(true));
+    closeBtn.addEventListener("click", () => setOpen(false));
+    backdrop.addEventListener("click", () => setOpen(false));
+    document.addEventListener("keydown", (e) => e.key === "Escape" && setOpen(false));
+
+    // Mobile "Personal" disclosure.
+    const disclosure = mobile.querySelector<HTMLElement>("[data-disclosure]");
+    if (disclosure) {
+      const dToggle = disclosure.querySelector<HTMLButtonElement>("[data-disclosure-toggle]")!;
+      const dPanel = disclosure.querySelector<HTMLElement>("[data-disclosure-panel]")!;
+      const dChevron = disclosure.querySelector<HTMLElement>("[data-disclosure-chevron]")!;
+      dToggle.addEventListener("click", () => {
+        const isOpen = dPanel.hidden;
+        dPanel.hidden = !isOpen;
+        dToggle.setAttribute("aria-expanded", String(isOpen));
+        dChevron.classList.toggle("rotate-180", isOpen);
+      });
+    }
+  }
+</script>

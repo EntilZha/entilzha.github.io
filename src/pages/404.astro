@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Page not found · Pedro Rodriguez"
+  description="The page you're looking for doesn't exist."
+>
+  <div class="py-20 text-center">
+    <p class="text-7xl font-bold tracking-tight text-cyan-700">404</p>
+    <h1 class="mt-4 text-2xl font-bold text-gray-900">Page not found</h1>
+    <p class="mx-auto mt-3 max-w-md text-gray-600">
+      The page you're looking for doesn't exist or may have moved. Try one of
+      these instead:
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a
+        href="/"
+        class="inline-flex h-10 items-center rounded-lg bg-cyan-600 px-4 text-sm font-semibold text-white transition-colors hover:bg-cyan-700"
+        >Home</a
+      >
+      <a
+        href="/blog/"
+        class="inline-flex h-10 items-center rounded-lg border border-gray-300 px-4 text-sm font-semibold text-gray-700 transition-colors hover:border-cyan-400 hover:text-cyan-700"
+        >Blog</a
+      >
+      <a
+        href="/publications/"
+        class="inline-flex h-10 items-center rounded-lg border border-gray-300 px-4 text-sm font-semibold text-gray-700 transition-colors hover:border-cyan-400 hover:text-cyan-700"
+        >Publications</a
+      >
+    </div>
+  </div>
+</Layout>

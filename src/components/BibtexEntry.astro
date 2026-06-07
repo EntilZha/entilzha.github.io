@@ -1,0 +1,56 @@
+---
+// Collapsible BibTeX block with a copy button. Plain Astro + vanilla JS so it
+// ships no framework runtime. The toggle and its panel are siblings (the panel
+// is full-width so it breaks onto its own line within the actions row); they
+// are linked via a unique id on `aria-controls`.
+interface Props {
+  bibtex: string;
+}
+const { bibtex } = Astro.props;
+const id = "bib-" + Math.random().toString(36).slice(2, 10);
+---
+
+<button
+  type="button"
+  data-bibtex-toggle
+  aria-controls={id}
+  aria-expanded="false"
+  class="text-xs font-semibold text-cyan-700 hover:underline cursor-pointer"
+>
+  [bibtex]
+</button>
+<div id={id} data-bibtex-panel hidden class="relative mt-2 w-full max-w-full">
+  <button
+    type="button"
+    data-bibtex-copy
+    class="absolute top-2 right-2 z-10 rounded border border-gray-300 bg-white px-2 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50 cursor-pointer"
+  >
+    Copy
+  </button>
+  <pre class="max-w-full overflow-x-auto rounded-lg border border-gray-200 bg-gray-100 p-4 pr-16 text-xs leading-relaxed text-gray-800"><code>{bibtex}</code></pre>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-bibtex-toggle]").forEach((btn) => {
+    const panel = document.getElementById(btn.getAttribute("aria-controls") || "");
+    if (!panel) return;
+    btn.addEventListener("click", () => {
+      const willOpen = panel.hidden;
+      panel.hidden = !willOpen;
+      btn.setAttribute("aria-expanded", String(willOpen));
+      btn.textContent = willOpen ? "[hide bibtex]" : "[bibtex]";
+    });
+
+    const copyBtn = panel.querySelector<HTMLButtonElement>("[data-bibtex-copy]");
+    const code = panel.querySelector("code");
+    copyBtn?.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(code?.textContent || "");
+        copyBtn.textContent = "Copied!";
+        setTimeout(() => (copyBtn.textContent = "Copy"), 1500);
+      } catch {
+        /* clipboard unavailable; ignore */
+      }
+    });
+  });
+</script>

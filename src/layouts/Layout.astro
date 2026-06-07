@@ -1,6 +1,6 @@
 ---
-import Navbar from "../components/Navbar";
-import ScrollToTop from "../components/ScrollToTop";
+import Navbar from "../components/Navbar.astro";
+import ScrollToTop from "../components/ScrollToTop.astro";
 import { photographyUrl } from "../config/nav";
 import "../styles/global.css";
 
@@ -8,13 +8,19 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  type?: "website" | "article";
+  publishedTime?: string;
 }
 
 const {
   title = "Pedro Rodriguez",
   description = "Pedro Rodriguez is a researcher in natural language processing and machine learning evaluation.",
-  image,
+  image = "/static/images/profile.jpg",
+  type = "website",
+  publishedTime,
 } = Astro.props;
+
+const imageUrl = new URL(image, Astro.site).href;
 
 const currentYear = new Date().getFullYear();
 ---
@@ -23,7 +29,7 @@ const currentYear = new Date().getFullYear();
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
@@ -36,15 +42,19 @@ const currentYear = new Date().getFullYear();
     <title>{title}</title>
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={Astro.url.href} />
     <meta property="og:site_name" content="Pedro Rodriguez" />
-    {image && <meta property="og:image" content={new URL(image, Astro.site).href} />}
+    <meta property="og:image" content={imageUrl} />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={Astro.url.href} />
@@ -58,39 +68,39 @@ const currentYear = new Date().getFullYear();
     />
   </head>
   <body>
-    <Navbar client:load />
+    <Navbar />
     <slot name="hero" />
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <slot />
     </main>
-    <footer class="border-t border-gray-200 dark:border-gray-700 mt-12">
+    <footer class="border-t border-gray-200 mt-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div
-          class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500 dark:text-gray-400"
+          class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500"
         >
           <p>&copy; {currentYear} Pedro Rodriguez</p>
           <div class="flex items-center gap-4">
             <a
               href="/blog/"
-              class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Blog</a
+              class="hover:text-gray-700 transition-colors">Blog</a
             >
             <a
               href="/publications/"
-              class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Publications</a
+              class="hover:text-gray-700 transition-colors">Publications</a
             >
             <a
               href="mailto:me@pedro.ai"
-              class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Email</a
+              class="hover:text-gray-700 transition-colors">Email</a
             >
             <a
               href={photographyUrl}
-              class="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Photography</a
+              class="hover:text-gray-700 transition-colors">Photography</a
             >
           </div>
         </div>
       </div>
     </footer>
-    <ScrollToTop client:load />
+    <ScrollToTop />
 
     <script>
       // Add a "Copy" button to bibtex code blocks (e.g. the citation blocks on

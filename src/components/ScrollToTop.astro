@@ -1,0 +1,32 @@
+---
+// Floating "scroll to top" button. Plain Astro + vanilla JS so it ships no
+// framework runtime. Appears after scrolling 300px down.
+---
+
+<button
+  type="button"
+  data-scroll-top
+  aria-label="Scroll to top"
+  class="fixed bottom-8 right-8 z-50 rounded-full bg-cyan-600 p-3 text-white shadow-lg opacity-0 translate-y-16 pointer-events-none transition-all duration-300 hover:bg-cyan-700"
+>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+  </svg>
+</button>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>("[data-scroll-top]");
+  if (btn) {
+    const update = () => {
+      const show = window.scrollY > 300;
+      btn.classList.toggle("opacity-100", show);
+      btn.classList.toggle("translate-y-0", show);
+      btn.classList.toggle("opacity-0", !show);
+      btn.classList.toggle("translate-y-16", !show);
+      btn.classList.toggle("pointer-events-none", !show);
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    update();
+  }
+</script>

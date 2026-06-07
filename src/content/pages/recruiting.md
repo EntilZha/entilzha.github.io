@@ -15,7 +15,7 @@ If the job you have doesn't match then feel free to contact me, but don't expect
 
 * You *must* provide details on the role and responsibilities for the job through email *before* I will chat over phone. If the role was never going to be a good fit then this save us both 10-20 minutes.
 * Do not call me before emailing role information.
-* If it is obvious you have not read my website or CV/Resume, I will ignore you message.
+* If it is obvious you have not read my website or CV/Resume, I will ignore your message.
 
 ### Role and Responsibilities
 

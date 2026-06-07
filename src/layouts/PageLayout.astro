@@ -13,11 +13,11 @@ const { title, description, backHref, backLabel } = Astro.props;
 
 <Layout title={`${title} · Pedro Rodriguez`} description={description}>
   <article
-    class="prose prose-gray dark:prose-invert max-w-none prose-a:text-cyan-600 dark:prose-a:text-cyan-400 prose-headings:font-semibold"
+    class="prose prose-gray max-w-none prose-a:text-cyan-600 prose-headings:font-semibold"
   >
     {
       backHref && (
-        <a href={backHref} class="not-prose text-sm text-cyan-600 dark:text-cyan-400 hover:underline">
+        <a href={backHref} class="not-prose text-sm text-cyan-600 hover:underline">
           &larr; {backLabel}
         </a>
       )
